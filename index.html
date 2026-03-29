@@ -318,1493 +318,1491 @@
     <p style="margin-bottom:16px; line-height:1.7; font-size:1em;">
       Join believers receiving daily scripture and devotionals
       straight to their inbox — free, every morning. 🙏
+    C
+  </div>
+</div>
+
+<footer>
+  <p>Daily KJV Bible App &nbsp;|&nbsp; King James Version is Public Domain</p>
+  <p style="margin-top:6px;">Built with love for the Word of God 🙏</p>
+</footer>
+
+<script>
+// MOOD DATA
+const moods = {
+  sad: {
+    verse: "He healeth the broken in heart, and bindeth up their wounds.",
+    ref: "Psalm 147:3",
+    encouragement: "God sees every tear you have cried today. You do not have to hide your sadness from Him — He is drawn to broken hearts and His healing is real. Bring Him your sadness exactly as it is and let Him hold it with you."
+  },
+  anxious: {
+    verse: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+    ref: "Philippians 4:6-7",
+    encouragement: "Anxiety tells you that you must figure everything out right now. God says bring it to Me instead. His peace is not something you manufacture — it is something He guards you with when you choose prayer over worry."
+  },
+  angry: {
+    verse: "Be ye angry, and sin not: let not the sun go down upon your wrath.",
+    ref: "Ephesians 4:26",
+    encouragement: "God does not condemn your anger — even Jesus felt righteous anger. What matters is what you do with it. Bring it honestly to God before it takes root and grows into something that hurts you or someone else."
+  },
+  lonely: {
+    verse: "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee.",
+    ref: "Isaiah 41:10",
+    encouragement: "Loneliness is one of the most painful human experiences — but you are never truly alone. The God of the universe is personally present with you right now in this very moment. He sees you, He knows you, and He is with you."
+  },
+  confused: {
+    verse: "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+    ref: "Proverbs 3:5-6",
+    encouragement: "When nothing makes sense, God asks for one thing — trust. Not understanding, not a plan, just trust. He promises to direct your path even when you cannot see it. You do not need clarity right now as much as you need Him."
+  },
+  weak: {
+    verse: "I can do all things through Christ which strengtheneth me.",
+    ref: "Philippians 4:13",
+    encouragement: "Feeling weak is not a sign that God has abandoned you — it is an invitation to lean on His strength instead of your own. His power is made perfect in weakness. The less you have of yourself, the more room there is for Him."
+  },
+  grateful: {
+    verse: "This is the day which the LORD hath made; we will rejoice and be glad in it.",
+    ref: "Psalm 118:24",
+    encouragement: "Gratitude is one of the most powerful spiritual acts you can practice. When you choose thankfulness you are declaring that God is good and that His goodness is bigger than any difficulty. Keep this feeling close and let it fuel your faith today."
+  },
+  joyful: {
+    verse: "Rejoice in the Lord always: and again I say, Rejoice.",
+    ref: "Philippians 4:4",
+    encouragement: "Joy is a gift and today you are living in it. Let this feeling be a reminder of God's goodness and share it generously with everyone around you. Your joy today could be the light someone else desperately needs to see."
+  },
+  hopeless: {
+    verse: "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+    ref: "Romans 15:13",
+    encouragement: "When hope feels completely gone, God calls Himself the God of hope — which means hope is not just something He gives, it is something He is. As long as you have Him you have access to hope that cannot be extinguished. He is not finished with your story."
+  },
+  afraid: {
+    verse: "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+    ref: "2 Timothy 1:7",
+    encouragement: "Fear did not come from God. He has placed inside you power, love, and a sound mind — and those are stronger than whatever is frightening you right now. Speak this verse out loud and remind fear that it has no authority over a child of God."
+  },
+  grieving: {
+    verse: "Blessed are they that mourn: for they shall be comforted.",
+    ref: "Matthew 5:4",
+    encouragement: "Grief is the price of love and God honors it completely. Jesus Himself wept at the tomb of Lazarus — He does not rush your grief or minimize your loss. He sits with you in it and He personally promises that comfort is coming. You are not alone in this."
+  },
+  blessed: {
+    verse: "Every good gift and every perfect gift is from above, and cometh down from the Father of lights.",
+    ref: "James 1:17",
+    encouragement: "Every good thing in your life has God's fingerprints on it. Take a moment right now to trace each blessing back to His hand and let gratitude deepen your relationship with Him. A heart that recognizes its blessings attracts even more of God's goodness."
+  }
+};
+
+function showMood(mood) {
+  const data = moods[mood];
+  document.querySelectorAll('.mood-btn').forEach(btn => btn.classList.remove('selected'));
+  event.target.closest('.mood-btn').classList.add('selected');
+  document.getElementById('moodVerse').textContent = `"${data.verse}"`;
+  document.getElementById('moodRef').textContent = `— ${data.ref}`;
+  document.getElementById('moodEncouragement').textContent = data.encouragement;
+  const result = document.getElementById('moodResult');
+  result.classList.add('visible');
+  result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function resetMood() {
+  document.querySelectorAll('.mood-btn').forEach(btn => btn.classList.remove('selected'));
+  document.getElementById('moodResult').classList.remove('visible');
+}
+
+// DEVOTIONAL DATA
+const devotionals = [
+  {
+    verse: "Fear thou not; for I am with thee: be not dismayed; for I am thy God.",
+    ref: "Isaiah 41:10",
+    title: "You Are Not Alone",
+    truth: "God does not promise a life without difficulty, but He promises His presence in every difficulty. His 'fear not' is not dismissing your struggle — it is answering it with Himself.",
+    reflection: "In what area of your life have you been trying to face things alone?",
+    prayer: "Lord, forgive me for forgetting You are with me. Help me to feel Your presence today in the moments I feel most alone. Strengthen me where I am weak. Amen.",
+    action: "Write down one worry and consciously hand it to God before you start your day."
+  },
+  {
+    verse: "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+    ref: "Isaiah 26:3",
+    title: "Peace That Passes Understanding",
+    truth: "Peace is not the absence of problems — it is the presence of trust. When your mind is anchored in God rather than your circumstances, peace follows naturally.",
+    reflection: "What is occupying your mind more than God today?",
+    prayer: "Father, help me to fix my thoughts on You and Your faithfulness today. Let Your peace guard my heart. Amen.",
+    action: "Set a phone reminder every 3 hours today that simply says 'Trust God.'"
+  },
+  {
+    verse: "I can do all things through Christ which strengtheneth me.",
+    ref: "Philippians 4:13",
+    title: "When You Feel Weak",
+    truth: "This verse is not a promise of superhuman ability — it is a promise of supernatural sufficiency. Whatever God calls you to, He equips you for.",
+    reflection: "What task or challenge have you been avoiding because you feel unqualified?",
+    prayer: "Jesus, fill me with Your strength today. Let Your power be made perfect in my weakness. Amen.",
+    action: "Take one step today toward the thing you've been afraid to try."
+  },
+  {
+    verse: "It is of the LORD's mercies that we are not consumed, because his compassions fail not. They are new every morning.",
+    ref: "Lamentations 3:22-23",
+    title: "New Every Morning",
+    truth: "Yesterday's failures do not carry into today. Every morning God renews His mercy toward you — not because you earned it, but because it is His nature.",
+    reflection: "What from yesterday do you need to release before stepping into today?",
+    prayer: "Lord, I receive Your fresh mercy this morning and choose to walk in it rather than in yesterday's guilt. Amen.",
+    action: "Write 'New Mercy Today' somewhere you will see it all day."
+  },
+  {
+    verse: "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
+    ref: "Philippians 4:19",
+    title: "The God Who Provides",
+    truth: "God's provision is measured by His riches — not yours. He does not supply your needs according to your bank account but according to His unlimited resources.",
+    reflection: "What need are you most anxious about right now?",
+    prayer: "Father, I trust You to supply according to Your riches, not my circumstances. Amen.",
+    action: "Make a list of 5 needs God has already met in your life as a reminder of His faithfulness."
+  },
+  {
+    verse: "Thy word is a lamp unto my feet, and a light unto my path.",
+    ref: "Psalm 119:105",
+    title: "Walking in the Light",
+    truth: "God's Word does not always show you the entire road ahead — it lights the next step. Sometimes faith means trusting the lamp more than demanding a floodlight.",
+    reflection: "Are you waiting for complete clarity before obeying what God has already shown you?",
+    prayer: "Lord, give me the courage to take the next step in obedience even when I cannot see far ahead. Amen.",
+    action: "Read one chapter of Psalms today and highlight one verse that speaks to your current situation."
+  },
+  {
+    verse: "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+    ref: "Matthew 11:28",
+    title: "Rest for the Weary",
+    truth: "Jesus invites you exactly as you are — tired, overwhelmed, and burdened. The rest He gives begins the moment you come.",
+    reflection: "What burden have you been carrying that you haven't given to Jesus?",
+    prayer: "Jesus, I bring You every weight I've been carrying. I receive Your rest right now by faith. Amen.",
+    action: "Take 10 minutes today to sit quietly with God — no phone, no noise, just rest."
+  },
+  {
+    verse: "The eyes of the LORD are upon the righteous, and his ears are open unto their cry.",
+    ref: "Psalm 34:15",
+    title: "The God Who Sees You",
+    truth: "You are never invisible to God. In your most overlooked moments, His eyes are fixed on you with full attention and complete love.",
+    reflection: "Have you ever felt like God wasn't paying attention to your situation?",
+    prayer: "Lord, thank You that Your eyes are on me — not to judge me but to guard and guide me. Amen.",
+    action: "Every time you feel unnoticed today, quietly say: 'God sees me.'"
+  },
+  {
+    verse: "He healeth the broken in heart, and bindeth up their wounds.",
+    ref: "Psalm 147:3",
+    title: "He Restores What Was Broken",
+    truth: "God is not repelled by your brokenness — He is drawn to it. The same hands that spoke the universe into existence are tender enough to bind up a wounded heart.",
+    reflection: "What broken place in your heart have you been hiding from God?",
+    prayer: "Father, I bring You the pieces of what has been broken in me. Begin Your healing work today. Amen.",
+    action: "Write down one area where you need healing as a reminder that you've given it to God."
+  },
+  {
+    verse: "Lo, children are an heritage of the LORD: and the fruit of the womb is his reward.",
+    ref: "Psalm 127:3",
+    title: "Children Are a Gift From God",
+    truth: "God calls children His heritage — treasures entrusted to parents as a direct reward from His hand. Every child carries the fingerprint of God's intentionality.",
+    reflection: "How does viewing children as God's heritage change the way you treat and speak to them?",
+    prayer: "Lord, help me to see children the way You see them — precious, purposed, and worthy of love and protection. Amen.",
+    action: "Speak one intentional word of encouragement over a child in your life today."
+  },
+  {
+    verse: "Train up a child in the way he should go: and when he is old, he will not depart from it.",
+    ref: "Proverbs 22:6",
+    title: "Train Them in the Way",
+    truth: "The investment you make in a child's spiritual foundation today produces fruit that outlasts your lifetime.",
+    reflection: "What spiritual habits or values are you intentionally passing on to the next generation?",
+    prayer: "Father, give me wisdom to train the children in my life with patience and purpose. Amen.",
+    action: "Read one Bible story or share one scripture with a child in your life today."
+  },
+  {
+    verse: "But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",
+    ref: "Matthew 19:14",
+    title: "Jesus and the Children",
+    truth: "Jesus used children as the very picture of what kingdom faith looks like. Childlike faith is not immature — it is the model.",
+    reflection: "In what ways has life made your faith more complicated than the simple trust of a child?",
+    prayer: "Jesus, restore in me the simple unashamed faith of a child. Help me protect that faith in every child I influence. Amen.",
+    action: "Approach one moment today with childlike trust — simply believe God without overanalyzing."
+  },
+  {
+    verse: "Have not I commanded thee? Be strong and courageous. Be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
+    ref: "Joshua 1:9",
+    title: "Courage for the Uncertain Road",
+    truth: "God says be courageous not because it is easy but because He is with you wherever you go.",
+    reflection: "What uncertain road are you facing that requires courage you don't feel you have?",
+    prayer: "Lord, I choose courage today not because I feel it but because Your presence makes it possible. Amen.",
+    action: "Take one courageous step today toward something you've been postponing out of fear."
+  },
+  {
+    verse: "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+    ref: "1 Thessalonians 5:18",
+    title: "The Power of a Grateful Heart",
+    truth: "Gratitude is a choice made in the middle of all circumstances — not just for everything but in everything.",
+    reflection: "What is one thing in your current situation you haven't thanked God for yet?",
+    prayer: "Father, cultivate a grateful heart in me that sees Your goodness even in ordinary moments. Amen.",
+    action: "Write down 10 things you are genuinely thankful for before you do anything else today."
+  },
+  {
+    verse: "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.",
+    ref: "Psalm 27:14",
+    title: "When the Answer Seems Delayed",
+    truth: "God's delays are never denials. Waiting on the Lord is active trust that believes His timing is wiser than your urgency.",
+    reflection: "What have you been waiting on God for and has your waiting been filled with trust or anxiety?",
+    prayer: "Lord, help me to wait well. Your timing is perfect even when I cannot see it. Amen.",
+    action: "Identify one situation where you've been rushing God and release the timeline to Him today."
+  },
+  {
+    verse: "Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee.",
+    ref: "Jeremiah 31:3",
+    title: "You Are Loved Without Condition",
+    truth: "God's love was not triggered by your goodness and cannot be revoked by your failure. He draws you with kindness — not shame or guilt.",
+    reflection: "Is there anything you've done that makes you feel unworthy of God's love today?",
+    prayer: "Father, help me to stop performing for Your love and simply rest in it. Amen.",
+    action: "Say out loud three times: 'I am loved by God completely and without condition.'"
+  },
+  {
+    verse: "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
+    ref: "Ephesians 4:32",
+    title: "Forgiveness Sets You Free",
+    truth: "Forgiveness releases the debt so you are no longer imprisoned by it. God's forgiveness toward you is both the model and the motivation.",
+    reflection: "Who in your life are you still holding an unforgiven debt against?",
+    prayer: "Lord, give me grace to release every offence and walk in the freedom that forgiveness brings. Amen.",
+    action: "Write the name of one person you need to forgive and make a conscious decision to release them today."
+  },
+  {
+    verse: "Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine.",
+    ref: "Isaiah 43:1",
+    title: "God Knows Your Name",
+    truth: "You are not a number or a face in the crowd to God. He has called you by name — personally, specifically, and purposefully.",
+    reflection: "How does being personally known and called by God change how you see yourself today?",
+    prayer: "Lord, thank You for knowing my name and calling me Yours. That is more than enough. Amen.",
+    action: "Spend 5 minutes in silence simply receiving the truth that God knows your name and loves what He knows."
+  },
+  {
+    verse: "To every thing there is a season, and a time to every purpose under the heaven.",
+    ref: "Ecclesiastes 3:1",
+    title: "Purpose in Every Season",
+    truth: "Every season — the painful ones, the joyful ones, the confusing ones — has purpose woven into it by a God who wastes nothing.",
+    reflection: "What season of life are you in and have you asked God what purpose He has placed in it?",
+    prayer: "Father, help me to trust Your purposes even in seasons I don't understand. Amen.",
+    action: "Journal for 5 minutes about what God might be teaching you in your current season."
+  },
+  {
+    verse: "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
+    ref: "Ephesians 6:11",
+    title: "The Armor of God",
+    truth: "God has not left you unarmed. He has provided full armor and His instruction is clear: put it on, stand firm, and do not surrender ground.",
+    reflection: "In what area have you been trying to stand without the armor God provided?",
+    prayer: "Lord, I put on Your truth, righteousness, peace, faith, and Word today. Help me stand firm. Amen.",
+    action: "Read Ephesians 6:13-18 and identify which piece of armor you most need right now."
+  },
+  {
+    verse: "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.",
+    ref: "Psalm 55:22",
+    title: "When Life Feels Overwhelming",
+    truth: "God does not ask you to carry what He has offered to carry for you. Casting your burden is an act of trust.",
+    reflection: "What burden have you been carrying that you need to give to God right now?",
+    prayer: "Father, I release every burden that was never mine to carry. Sustain me today. Amen.",
+    action: "Write your heaviest burden on paper, pray over it, then tear it up as a physical act of giving it to God."
+  },
+  {
+    verse: "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+    ref: "James 1:5",
+    title: "Walking in Wisdom",
+    truth: "God gives wisdom generously without making you feel foolish for asking. Every decision you face can be brought to Him.",
+    reflection: "What decision are you facing that you haven't asked God for wisdom about?",
+    prayer: "Lord, I come boldly asking for wisdom, believing You will give it generously. Amen.",
+    action: "Before any significant decision today pause and ask God for wisdom first."
+  },
+  {
+    verse: "Know therefore that the LORD thy God, he is God, the faithful God, which keepeth covenant and mercy with them that love him.",
+    ref: "Deuteronomy 7:9",
+    title: "He Is Faithful",
+    truth: "God's faithfulness is a fixed attribute of His character. He has never broken a promise or failed to show up for those who trust Him.",
+    reflection: "Think of three times God was faithful in your past. How does that strengthen your trust today?",
+    prayer: "Lord, help my trust in You grow stronger with every memory of Your faithfulness. Amen.",
+    action: "Share one story of God's faithfulness with someone today."
+  },
+  {
+    verse: "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+    ref: "Psalm 27:1",
+    title: "Light in the Darkness",
+    truth: "When God is your light, darkness has no power. When He is your salvation, no enemy has final authority over you.",
+    reflection: "What darkness do you need God to be your light in today?",
+    prayer: "Lord, You are my light in every dark place. I walk in Your light rather than being paralyzed by darkness. Amen.",
+    action: "Turn on a light in a dark room as a reminder that one source of light always overcomes darkness."
+  },
+  {
+    verse: "They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+    ref: "Isaiah 40:31",
+    title: "Renewed in His Presence",
+    truth: "Renewal comes from waiting in God's presence not from more effort. Waiting on God is catching the wind of His Spirit and being carried by what He provides.",
+    reflection: "When is the last time you truly waited in God's presence without an agenda?",
+    prayer: "Father, I wait on You right now. Renew my strength and carry me through what I cannot walk through alone. Amen.",
+    action: "Spend 15 uninterrupted minutes in prayer today — no phone, no distractions, just waiting on God."
+  },
+  {
+    verse: "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+    ref: "Matthew 6:33",
+    title: "Seek First",
+    truth: "When God is first in your time, decisions, and pursuits, He takes personal responsibility for your provision.",
+    reflection: "Honestly, what comes before God in your daily priorities?",
+    prayer: "Lord, I choose to seek Your kingdom first and trust You with everything else. Amen.",
+    action: "Before checking your phone tomorrow morning spend the first 5 minutes seeking God."
+  },
+  {
+    verse: "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness.",
+    ref: "2 Timothy 3:16",
+    title: "The Gift of His Word",
+    truth: "Every word of the Bible is God-breathed — given for your instruction, correction, encouragement, and transformation.",
+    reflection: "How has reading God's Word over these 27 days changed the way you see yourself or your circumstances?",
+    prayer: "Father, let Your Word continue to correct, instruct, and transform me daily. Amen.",
+    action: "Share this app or one of these devotionals with someone who needs it today."
+  },
+  {
+    verse: "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
+    ref: "1 Corinthians 13:13",
+    title: "Love Is the Greatest",
+    truth: "Love is eternal because God Himself is eternal and God is love. Of all spiritual virtues love is the one that outlasts and defines everything.",
+    reflection: "Who in your life most needs to experience God's love through you right now?",
+    prayer: "Lord, make me an instrument of Your love to everyone I encounter today. Amen.",
+    action: "Do one unexpected act of love for someone today with no expectation of return."
+  },
+  {
+    verse: "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+    ref: "Romans 15:13",
+    title: "Hope That Does Not Disappoint",
+    truth: "Hope in God is confident expectation based on who He is. He is called the God of hope — hope is not just something He gives, it is something He is.",
+    reflection: "In what area of your life has hope been hardest to hold onto?",
+    prayer: "God of hope, let hope rise where discouragement has tried to take root. Amen.",
+    action: "Write down one thing you are choosing to hope for and write God's name next to it as the anchor."
+  },
+  {
+    verse: "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+    ref: "2 Corinthians 5:17",
+    title: "A New Beginning Every Day",
+    truth: "In Christ you are genuinely, permanently, and completely new. Every day in Christ is lived as a new creation walking in new purpose.",
+    reflection: "What old identity or past failure have you been allowing to define you that God says has passed away?",
+    prayer: "Lord, I step into today as a new creation — purposed, loved, and free. Amen.",
+    action: "Write the old identity you are releasing and next to it write who God says you are."
+  }
+];
+
+let currentDay = 0;
+
+function loadDay(index) {
+  const d = devotionals[index];
+  document.getElementById('dayIndicator').textContent = `Day ${index + 1} of 30`;
+  document.getElementById('verseText').textContent = `"${d.verse}"`;
+  document.getElementById('verseRef').textContent = `— ${d.ref}`;
+  document.getElementById('devotionalContent').innerHTML = `
+    <p><span class="devotional-label">✦ ${d.title}</span></p>
+    <p><span class="devotional-label">Truth:</span> ${d.truth}</p>
+    <p><span class="devotional-label">Reflection:</span> ${d.reflection}</p>
+    <div class="prayer-box"><span class="devotional-label">Prayer:</span><br>${d.prayer}</div>
+    <div class="action-box"><span class="devotional-label">⚡ Today's Action:</span> ${d.action}</div>
+  `;
+  document.getElementById('prevBtn').disabled = index === 0;
+  document.getElementById('nextBtn').disabled = index === devotionals.length - 1;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function changeDay(direction) {
+  currentDay = Math.max(0, Math.min(devotionals.length - 1, currentDay + direction));
+  loadDay(currentDay);
+}
+
+function toggleDark() {
+  document.body.classList.toggle('dark');
+  const btn = document.querySelector('.dark-toggle');
+  btn.textContent = document.body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';
+}
+
+function shareVerse() {
+  const d = devotionals[currentDay];
+  const text = `"${d.verse}" — ${d.ref}\n\nRead today's devotional at your Daily KJV Bible App 🙏`;
+  if (navigator.share) {
+    navigator.share({ title: 'Daily KJV Bible', text: text });
+  } else {
+    navigator.clipboard.writeText(text);
+    alert('Verse copied to clipboard! Share it anywhere. 🙏');
+  }
+}
+
+const startDate = new Date('2024-01-01');
+const today = new Date();
+const daysDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) % 30;
+currentDay = daysDiff >= 0 ? daysDiff : 0;
+loadDay(currentDay);
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily KJV Bible – Verse, Devotional & Reading</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', serif;
+    background: #f9f6f0;
+    color: #2c2c2c;
+    transition: all 0.3s ease;
+  }
+  body.dark { background: #1a1a2e; color: #e0d7c6; }
+  header {
+    background: #2c5f2e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  header h1 { font-size: 1.6em; letter-spacing: 1px; }
+  header p { font-size: 0.85em; opacity: 0.85; margin-top: 4px; }
+  .dark-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85em;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px; }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  body.dark .card {
+    background: #16213e;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  .card-title {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2c5f2e;
+    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
+  }
+  body.dark .card-title { color: #7ec882; }
+  .verse-text {
+    font-size: 1.35em;
+    line-height: 1.7;
+    font-style: italic;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  body.dark .verse-text { color: #f0e6d3; }
+  .verse-ref {
+    font-size: 0.9em;
+    color: #2c5f2e;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+  body.dark .verse-ref { color: #7ec882; }
+  .devotional-section p {
+    font-size: 1em;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  .devotional-label {
+    font-weight: bold;
+    color: #2c5f2e;
+    font-family: Arial, sans-serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  body.dark .devotional-label { color: #7ec882; }
+  .prayer-box {
+    background: #f0f7f0;
+    border-left: 4px solid #2c5f2e;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    line-height: 1.75;
+    margin: 10px 0 14px;
+  }
+  body.dark .prayer-box { background: #0f3460; border-left-color: #7ec882; }
+  .action-box {
+    background: #fff8e7;
+    border: 1px solid #f0c040;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+  body.dark .action-box { background: #2a2a1a; border-color: #a08030; }
+  .nav-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .nav-btn {
+    background: #2c5f2e;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-family: Arial, sans-serif;
+    transition: background 0.2s;
+  }
+  .nav-btn:hover { background: #1e4220; }
+  .nav-btn:disabled { background: #aaa; cursor: not-allowed; }
+  .day-indicator {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 16px;
+  }
+  .share-btn {
+    background: none;
+    border: 2px solid #2c5f2e;
+    color: #2c5f2e;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-top: 12px;
+    font-family: Arial, sans-serif;
+    transition: all 0.2s;
+  }
+  .share-btn:hover { background: #2c5f2e; color: white; }
+  body.dark .share-btn { border-color: #7ec882; color: #7ec882; }
+  body.dark .share-btn:hover { background: #7ec882; color: #1a1a2e; }
+
+  /* MOOD CHECKER STYLES */
+  .mood-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .mood-btn {
+    background: #f0f7f0;
+    border: 2px solid #d0e8d0;
+    border-radius: 12px;
+    padding: 12px 6px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.8em;
+    transition: all 0.2s;
+    color: #2c2c2c;
+  }
+  .mood-btn:hover { background: #2c5f2e; color: white; border-color: #2c5f2e; }
+  .mood-btn.selected { background: #2c5f2e; color: white; border-color: #2c5f2e; }
+  body.dark .mood-btn { background: #0f3460; border-color: #1a4a6e; color: #e0d7c6; }
+  body.dark .mood-btn:hover { background: #7ec882; color: #1a1a2e; }
+  body.dark .mood-btn.selected { background: #7ec882; color: #1a1a2e; }
+  .mood-emoji { font-size: 1.8em; display: block; margin-bottom: 4px; }
+  .mood-result {
+    display: none;
+    margin-top: 16px;
+    padding: 20px;
+    background: #f0f7f0;
+    border-radius: 12px;
+    border-left: 4px solid #2c5f2e;
+  }
+  body.dark .mood-result { background: #0f3460; border-left-color: #7ec882; }
+  .mood-result.visible { display: block; }
+  .mood-verse {
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .mood-ref {
+    font-weight: bold;
+    color: #2c5f2e;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+    margin-bottom: 12px;
+  }
+  body.dark .mood-ref { color: #7ec882; }
+  .mood-encouragement {
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: #444;
+  }
+  body.dark .mood-encouragement { color: #c0b89a; }
+  .mood-reset {
+    background: none;
+    border: 2px solid #2c5f2e;
+    color: #2c5f2e;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-top: 14px;
+    font-family: Arial, sans-serif;
+  }
+  body.dark .mood-reset { border-color: #7ec882; color: #7ec882; }
+
+  footer {
+    text-align: center;
+    padding: 30px 16px;
+    font-size: 0.8em;
+    color: #999;
+    font-family: Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>✝ Daily KJV Bible</h1>
+  <p>Verse • Devotional • Prayer • Action</p>
+  <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+</header>
+
+<div class="container">
+
+  <!-- MOOD CHECKER -->
+  <div class="card">
+    <div class="card-title">✦ How Are You Feeling Today?</div>
+    <p style="font-size:0.95em; color:#666; margin-bottom:4px; font-family:Arial,sans-serif;">
+      Select how you feel and receive a scripture just for you 🙏
     </p>
-    <a href="https://kjvdailywordvault.substack.com/subscribe" target="_blank">
+    <div class="mood-grid">
+      <button class="mood-btn" onclick="showMood('sad')">
+        <span class="mood-emoji">😔</span>Sad
+      </button>
+      <button class="mood-btn" onclick="showMood('anxious')">
+        <span class="mood-emoji">😰</span>Anxious
+      </button>
+      <button class="mood-btn" onclick="showMood('angry')">
+        <span class="mood-emoji">😤</span>Angry
+      </button>
+      <button class="mood-btn" onclick="showMood('lonely')">
+        <span class="mood-emoji">🥺</span>Lonely
+      </button>
+      <button class="mood-btn" onclick="showMood('confused')">
+        <span class="mood-emoji">😕</span>Confused
+      </button>
+      <button class="mood-btn" onclick="showMood('weak')">
+        <span class="mood-emoji">😓</span>Weak
+      </button>
+      <button class="mood-btn" onclick="showMood('grateful')">
+        <span class="mood-emoji">🙏</span>Grateful
+      </button>
+      <button class="mood-btn" onclick="showMood('joyful')">
+        <span class="mood-emoji">😊</span>Joyful
+      </button>
+      <button class="mood-btn" onclick="showMood('hopeless')">
+        <span class="mood-emoji">😞</span>Hopeless
+      </button>
+      <button class="mood-btn" onclick="showMood('afraid')">
+        <span class="mood-emoji">😨</span>Afraid
+      </button>
+      <button class="mood-btn" onclick="showMood('grieving')">
+        <span class="mood-emoji">💔</span>Grieving
+      </button>
+      <button class="mood-btn" onclick="showMood('blessed')">
+        <span class="mood-emoji">✨</span>Blessed
+      </button>
+    </div>
+    <div class="mood-result" id="moodResult">
+      <div class="mood-verse" id="moodVerse"></div>
+      <div class="mood-ref" id="moodRef"></div>
+      <div class="mood-encouragement" id="moodEncouragement"></div>
+      <button class="mood-reset" onclick="resetMood()">Choose a Different Feeling</button>
+    </div>
+  </div>
+
+  <div class="day-indicator" id="dayIndicator">Day 1 of 30</div>
+
+  <!-- VERSE OF THE DAY -->
+  <div class="card">
+    <div class="card-title">✦ Verse of the Day</div>
+    <div class="verse-text" id="verseText"></div>
+    <div class="verse-ref" id="verseRef"></div>
+    <button class="share-btn" onclick="shareVerse()">Share This Verse</button>
+  </div>
+
+  <!-- DEVOTIONAL -->
+  <div class="card devotional-section">
+    <div class="card-title">✦ Today's Devotional</div>
+    <div id="devotionalContent"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn" onclick="changeDay(-1)">← Previous</button>
+    <button class="nav-btn" id="nextBtn" onclick="changeDay(1)">Next →</button>
+  </div>
+
+</div>
+
+<!-- EMAIL SUBSCRIBE -->
+<div class="container">
+  <div class="card" style="text-align:center;">
+    <div class="card-title">✦ Get the Daily Verse by Email</div>
+    <p style="margin-bottom:16px; line-height:1.7; font-size:1em;">
+      Join believers receiving daily scripture and devotionals
+      straight to their inbox — free, every morning. 🙏
+    </p>
+    <a href="PASTE_YOUR_BEEHIIV_LINK_HERE"
+       target="_blank"
+       style="display:inline-block; background:#2c5f2e; color:white;
+              padding:14px 36px; border-radius:25px; text-decoration:none;
+              font-family:Arial,sans-serif; font-size:1em; margin-top:8px;">
+      ✉ Subscribe Free
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>Daily KJV Bible App &nbsp;|&nbsp; King James Version is Public Domain</p>
+  <p style="margin-top:6px;">Built with love for the Word of God 🙏</p>
+</footer>
+
+<script>
+// MOOD DATA
+const moods = {
+  sad: {
+    verse: "He healeth the broken in heart, and bindeth up their wounds.",
+    ref: "Psalm 147:3",
+    encouragement: "God sees every tear you have cried today. You do not have to hide your sadness from Him — He is drawn to broken hearts and His healing is real. Bring Him your sadness exactly as it is and let Him hold it with you."
+  },
+  anxious: {
+    verse: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+    ref: "Philippians 4:6-7",
+    encouragement: "Anxiety tells you that you must figure everything out right now. God says bring it to Me instead. His peace is not something you manufacture — it is something He guards you with when you choose prayer over worry."
+  },
+  angry: {
+    verse: "Be ye angry, and sin not: let not the sun go down upon your wrath.",
+    ref: "Ephesians 4:26",
+    encouragement: "God does not condemn your anger — even Jesus felt righteous anger. What matters is what you do with it. Bring it honestly to God before it takes root and grows into something that hurts you or someone else."
+  },
+  lonely: {
+    verse: "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee.",
+    ref: "Isaiah 41:10",
+    encouragement: "Loneliness is one of the most painful human experiences — but you are never truly alone. The God of the universe is personally present with you right now in this very moment. He sees you, He knows you, and He is with you."
+  },
+  confused: {
+    verse: "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+    ref: "Proverbs 3:5-6",
+    encouragement: "When nothing makes sense, God asks for one thing — trust. Not understanding, not a plan, just trust. He promises to direct your path even when you cannot see it. You do not need clarity right now as much as you need Him."
+  },
+  weak: {
+    verse: "I can do all things through Christ which strengtheneth me.",
+    ref: "Philippians 4:13",
+    encouragement: "Feeling weak is not a sign that God has abandoned you — it is an invitation to lean on His strength instead of your own. His power is made perfect in weakness. The less you have of yourself, the more room there is for Him."
+  },
+  grateful: {
+    verse: "This is the day which the LORD hath made; we will rejoice and be glad in it.",
+    ref: "Psalm 118:24",
+    encouragement: "Gratitude is one of the most powerful spiritual acts you can practice. When you choose thankfulness you are declaring that God is good and that His goodness is bigger than any difficulty. Keep this feeling close and let it fuel your faith today."
+  },
+  joyful: {
+    verse: "Rejoice in the Lord always: and again I say, Rejoice.",
+    ref: "Philippians 4:4",
+    encouragement: "Joy is a gift and today you are living in it. Let this feeling be a reminder of God's goodness and share it generously with everyone around you. Your joy today could be the light someone else desperately needs to see."
+  },
+  hopeless: {
+    verse: "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+    ref: "Romans 15:13",
+    encouragement: "When hope feels completely gone, God calls Himself the God of hope — which means hope is not just something He gives, it is something He is. As long as you have Him you have access to hope that cannot be extinguished. He is not finished with your story."
+  },
+  afraid: {
+    verse: "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+    ref: "2 Timothy 1:7",
+    encouragement: "Fear did not come from God. He has placed inside you power, love, and a sound mind — and those are stronger than whatever is frightening you right now. Speak this verse out loud and remind fear that it has no authority over a child of God."
+  },
+  grieving: {
+    verse: "Blessed are they that mourn: for they shall be comforted.",
+    ref: "Matthew 5:4",
+    encouragement: "Grief is the price of love and God honors it completely. Jesus Himself wept at the tomb of Lazarus — He does not rush your grief or minimize your loss. He sits with you in it and He personally promises that comfort is coming. You are not alone in this."
+  },
+  blessed: {
+    verse: "Every good gift and every perfect gift is from above, and cometh down from the Father of lights.",
+    ref: "James 1:17",
+    encouragement: "Every good thing in your life has God's fingerprints on it. Take a moment right now to trace each blessing back to His hand and let gratitude deepen your relationship with Him. A heart that recognizes its blessings attracts even more of God's goodness."
+  }
+};
+
+function showMood(mood) {
+  const data = moods[mood];
+  document.querySelectorAll('.mood-btn').forEach(btn => btn.classList.remove('selected'));
+  event.target.closest('.mood-btn').classList.add('selected');
+  document.getElementById('moodVerse').textContent = `"${data.verse}"`;
+  document.getElementById('moodRef').textContent = `— ${data.ref}`;
+  document.getElementById('moodEncouragement').textContent = data.encouragement;
+  const result = document.getElementById('moodResult');
+  result.classList.add('visible');
+  result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function resetMood() {
+  document.querySelectorAll('.mood-btn').forEach(btn => btn.classList.remove('selected'));
+  document.getElementById('moodResult').classList.remove('visible');
+}
+
+// DEVOTIONAL DATA
+const devotionals = [
+  {
+    verse: "Fear thou not; for I am with thee: be not dismayed; for I am thy God.",
+    ref: "Isaiah 41:10",
+    title: "You Are Not Alone",
+    truth: "God does not promise a life without difficulty, but He promises His presence in every difficulty. His 'fear not' is not dismissing your struggle — it is answering it with Himself.",
+    reflection: "In what area of your life have you been trying to face things alone?",
+    prayer: "Lord, forgive me for forgetting You are with me. Help me to feel Your presence today in the moments I feel most alone. Strengthen me where I am weak. Amen.",
+    action: "Write down one worry and consciously hand it to God before you start your day."
+  },
+  {
+    verse: "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+    ref: "Isaiah 26:3",
+    title: "Peace That Passes Understanding",
+    truth: "Peace is not the absence of problems — it is the presence of trust. When your mind is anchored in God rather than your circumstances, peace follows naturally.",
+    reflection: "What is occupying your mind more than God today?",
+    prayer: "Father, help me to fix my thoughts on You and Your faithfulness today. Let Your peace guard my heart. Amen.",
+    action: "Set a phone reminder every 3 hours today that simply says 'Trust God.'"
+  },
+  {
+    verse: "I can do all things through Christ which strengtheneth me.",
+    ref: "Philippians 4:13",
+    title: "When You Feel Weak",
+    truth: "This verse is not a promise of superhuman ability — it is a promise of supernatural sufficiency. Whatever God calls you to, He equips you for.",
+    reflection: "What task or challenge have you been avoiding because you feel unqualified?",
+    prayer: "Jesus, fill me with Your strength today. Let Your power be made perfect in my weakness. Amen.",
+    action: "Take one step today toward the thing you've been afraid to try."
+  },
+  {
+    verse: "It is of the LORD's mercies that we are not consumed, because his compassions fail not. They are new every morning.",
+    ref: "Lamentations 3:22-23",
+    title: "New Every Morning",
+    truth: "Yesterday's failures do not carry into today. Every morning God renews His mercy toward you — not because you earned it, but because it is His nature.",
+    reflection: "What from yesterday do you need to release before stepping into today?",
+    prayer: "Lord, I receive Your fresh mercy this morning and choose to walk in it rather than in yesterday's guilt. Amen.",
+    action: "Write 'New Mercy Today' somewhere you will see it all day."
+  },
+  {
+    verse: "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
+    ref: "Philippians 4:19",
+    title: "The God Who Provides",
+    truth: "God's provision is measured by His riches — not yours. He does not supply your needs according to your bank account but according to His unlimited resources.",
+    reflection: "What need are you most anxious about right now?",
+    prayer: "Father, I trust You to supply according to Your riches, not my circumstances. Amen.",
+    action: "Make a list of 5 needs God has already met in your life as a reminder of His faithfulness."
+  },
+  {
+    verse: "Thy word is a lamp unto my feet, and a light unto my path.",
+    ref: "Psalm 119:105",
+    title: "Walking in the Light",
+    truth: "God's Word does not always show you the entire road ahead — it lights the next step. Sometimes faith means trusting the lamp more than demanding a floodlight.",
+    reflection: "Are you waiting for complete clarity before obeying what God has already shown you?",
+    prayer: "Lord, give me the courage to take the next step in obedience even when I cannot see far ahead. Amen.",
+    action: "Read one chapter of Psalms today and highlight one verse that speaks to your current situation."
+  },
+  {
+    verse: "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+    ref: "Matthew 11:28",
+    title: "Rest for the Weary",
+    truth: "Jesus invites you exactly as you are — tired, overwhelmed, and burdened. The rest He gives begins the moment you come.",
+    reflection: "What burden have you been carrying that you haven't given to Jesus?",
+    prayer: "Jesus, I bring You every weight I've been carrying. I receive Your rest right now by faith. Amen.",
+    action: "Take 10 minutes today to sit quietly with God — no phone, no noise, just rest."
+  },
+  {
+    verse: "The eyes of the LORD are upon the righteous, and his ears are open unto their cry.",
+    ref: "Psalm 34:15",
+    title: "The God Who Sees You",
+    truth: "You are never invisible to God. In your most overlooked moments, His eyes are fixed on you with full attention and complete love.",
+    reflection: "Have you ever felt like God wasn't paying attention to your situation?",
+    prayer: "Lord, thank You that Your eyes are on me — not to judge me but to guard and guide me. Amen.",
+    action: "Every time you feel unnoticed today, quietly say: 'God sees me.'"
+  },
+  {
+    verse: "He healeth the broken in heart, and bindeth up their wounds.",
+    ref: "Psalm 147:3",
+    title: "He Restores What Was Broken",
+    truth: "God is not repelled by your brokenness — He is drawn to it. The same hands that spoke the universe into existence are tender enough to bind up a wounded heart.",
+    reflection: "What broken place in your heart have you been hiding from God?",
+    prayer: "Father, I bring You the pieces of what has been broken in me. Begin Your healing work today. Amen.",
+    action: "Write down one area where you need healing as a reminder that you've given it to God."
+  },
+  {
+    verse: "Lo, children are an heritage of the LORD: and the fruit of the womb is his reward.",
+    ref: "Psalm 127:3",
+    title: "Children Are a Gift From God",
+    truth: "God calls children His heritage — treasures entrusted to parents as a direct reward from His hand. Every child carries the fingerprint of God's intentionality.",
+    reflection: "How does viewing children as God's heritage change the way you treat and speak to them?",
+    prayer: "Lord, help me to see children the way You see them — precious, purposed, and worthy of love and protection. Amen.",
+    action: "Speak one intentional word of encouragement over a child in your life today."
+  },
+  {
+    verse: "Train up a child in the way he should go: and when he is old, he will not depart from it.",
+    ref: "Proverbs 22:6",
+    title: "Train Them in the Way",
+    truth: "The investment you make in a child's spiritual foundation today produces fruit that outlasts your lifetime.",
+    reflection: "What spiritual habits or values are you intentionally passing on to the next generation?",
+    prayer: "Father, give me wisdom to train the children in my life with patience and purpose. Amen.",
+    action: "Read one Bible story or share one scripture with a child in your life today."
+  },
+  {
+    verse: "But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",
+    ref: "Matthew 19:14",
+    title: "Jesus and the Children",
+    truth: "Jesus used children as the very picture of what kingdom faith looks like. Childlike faith is not immature — it is the model.",
+    reflection: "In what ways has life made your faith more complicated than the simple trust of a child?",
+    prayer: "Jesus, restore in me the simple unashamed faith of a child. Help me protect that faith in every child I influence. Amen.",
+    action: "Approach one moment today with childlike trust — simply believe God without overanalyzing."
+  },
+  {
+    verse: "Have not I commanded thee? Be strong and courageous. Be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
+    ref: "Joshua 1:9",
+    title: "Courage for the Uncertain Road",
+    truth: "God says be courageous not because it is easy but because He is with you wherever you go.",
+    reflection: "What uncertain road are you facing that requires courage you don't feel you have?",
+    prayer: "Lord, I choose courage today not because I feel it but because Your presence makes it possible. Amen.",
+    action: "Take one courageous step today toward something you've been postponing out of fear."
+  },
+  {
+    verse: "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+    ref: "1 Thessalonians 5:18",
+    title: "The Power of a Grateful Heart",
+    truth: "Gratitude is a choice made in the middle of all circumstances — not just for everything but in everything.",
+    reflection: "What is one thing in your current situation you haven't thanked God for yet?",
+    prayer: "Father, cultivate a grateful heart in me that sees Your goodness even in ordinary moments. Amen.",
+    action: "Write down 10 things you are genuinely thankful for before you do anything else today."
+  },
+  {
+    verse: "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.",
+    ref: "Psalm 27:14",
+    title: "When the Answer Seems Delayed",
+    truth: "God's delays are never denials. Waiting on the Lord is active trust that believes His timing is wiser than your urgency.",
+    reflection: "What have you been waiting on God for and has your waiting been filled with trust or anxiety?",
+    prayer: "Lord, help me to wait well. Your timing is perfect even when I cannot see it. Amen.",
+    action: "Identify one situation where you've been rushing God and release the timeline to Him today."
+  },
+  {
+    verse: "Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee.",
+    ref: "Jeremiah 31:3",
+    title: "You Are Loved Without Condition",
+    truth: "God's love was not triggered by your goodness and cannot be revoked by your failure. He draws you with kindness — not shame or guilt.",
+    reflection: "Is there anything you've done that makes you feel unworthy of God's love today?",
+    prayer: "Father, help me to stop performing for Your love and simply rest in it. Amen.",
+    action: "Say out loud three times: 'I am loved by God completely and without condition.'"
+  },
+  {
+    verse: "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
+    ref: "Ephesians 4:32",
+    title: "Forgiveness Sets You Free",
+    truth: "Forgiveness releases the debt so you are no longer imprisoned by it. God's forgiveness toward you is both the model and the motivation.",
+    reflection: "Who in your life are you still holding an unforgiven debt against?",
+    prayer: "Lord, give me grace to release every offence and walk in the freedom that forgiveness brings. Amen.",
+    action: "Write the name of one person you need to forgive and make a conscious decision to release them today."
+  },
+  {
+    verse: "Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine.",
+    ref: "Isaiah 43:1",
+    title: "God Knows Your Name",
+    truth: "You are not a number or a face in the crowd to God. He has called you by name — personally, specifically, and purposefully.",
+    reflection: "How does being personally known and called by God change how you see yourself today?",
+    prayer: "Lord, thank You for knowing my name and calling me Yours. That is more than enough. Amen.",
+    action: "Spend 5 minutes in silence simply receiving the truth that God knows your name and loves what He knows."
+  },
+  {
+    verse: "To every thing there is a season, and a time to every purpose under the heaven.",
+    ref: "Ecclesiastes 3:1",
+    title: "Purpose in Every Season",
+    truth: "Every season — the painful ones, the joyful ones, the confusing ones — has purpose woven into it by a God who wastes nothing.",
+    reflection: "What season of life are you in and have you asked God what purpose He has placed in it?",
+    prayer: "Father, help me to trust Your purposes even in seasons I don't understand. Amen.",
+    action: "Journal for 5 minutes about what God might be teaching you in your current season."
+  },
+  {
+    verse: "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
+    ref: "Ephesians 6:11",
+    title: "The Armor of God",
+    truth: "God has not left you unarmed. He has provided full armor and His instruction is clear: put it on, stand firm, and do not surrender ground.",
+    reflection: "In what area have you been trying to stand without the armor God provided?",
+    prayer: "Lord, I put on Your truth, righteousness, peace, faith, and Word today. Help me stand firm. Amen.",
+    action: "Read Ephesians 6:13-18 and identify which piece of armor you most need right now."
+  },
+  {
+    verse: "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.",
+    ref: "Psalm 55:22",
+    title: "When Life Feels Overwhelming",
+    truth: "God does not ask you to carry what He has offered to carry for you. Casting your burden is an act of trust.",
+    reflection: "What burden have you been carrying that you need to give to God right now?",
+    prayer: "Father, I release every burden that was never mine to carry. Sustain me today. Amen.",
+    action: "Write your heaviest burden on paper, pray over it, then tear it up as a physical act of giving it to God."
+  },
+  {
+    verse: "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+    ref: "James 1:5",
+    title: "Walking in Wisdom",
+    truth: "God gives wisdom generously without making you feel foolish for asking. Every decision you face can be brought to Him.",
+    reflection: "What decision are you facing that you haven't asked God for wisdom about?",
+    prayer: "Lord, I come boldly asking for wisdom, believing You will give it generously. Amen.",
+    action: "Before any significant decision today pause and ask God for wisdom first."
+  },
+  {
+    verse: "Know therefore that the LORD thy God, he is God, the faithful God, which keepeth covenant and mercy with them that love him.",
+    ref: "Deuteronomy 7:9",
+    title: "He Is Faithful",
+    truth: "God's faithfulness is a fixed attribute of His character. He has never broken a promise or failed to show up for those who trust Him.",
+    reflection: "Think of three times God was faithful in your past. How does that strengthen your trust today?",
+    prayer: "Lord, help my trust in You grow stronger with every memory of Your faithfulness. Amen.",
+    action: "Share one story of God's faithfulness with someone today."
+  },
+  {
+    verse: "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+    ref: "Psalm 27:1",
+    title: "Light in the Darkness",
+    truth: "When God is your light, darkness has no power. When He is your salvation, no enemy has final authority over you.",
+    reflection: "What darkness do you need God to be your light in today?",
+    prayer: "Lord, You are my light in every dark place. I walk in Your light rather than being paralyzed by darkness. Amen.",
+    action: "Turn on a light in a dark room as a reminder that one source of light always overcomes darkness."
+  },
+  {
+    verse: "They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+    ref: "Isaiah 40:31",
+    title: "Renewed in His Presence",
+    truth: "Renewal comes from waiting in God's presence not from more effort. Waiting on God is catching the wind of His Spirit and being carried by what He provides.",
+    reflection: "When is the last time you truly waited in God's presence without an agenda?",
+    prayer: "Father, I wait on You right now. Renew my strength and carry me through what I cannot walk through alone. Amen.",
+    action: "Spend 15 uninterrupted minutes in prayer today — no phone, no distractions, just waiting on God."
+  },
+  {
+    verse: "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+    ref: "Matthew 6:33",
+    title: "Seek First",
+    truth: "When God is first in your time, decisions, and pursuits, He takes personal responsibility for your provision.",
+    reflection: "Honestly, what comes before God in your daily priorities?",
+    prayer: "Lord, I choose to seek Your kingdom first and trust You with everything else. Amen.",
+    action: "Before checking your phone tomorrow morning spend the first 5 minutes seeking God."
+  },
+  {
+    verse: "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness.",
+    ref: "2 Timothy 3:16",
+    title: "The Gift of His Word",
+    truth: "Every word of the Bible is God-breathed — given for your instruction, correction, encouragement, and transformation.",
+    reflection: "How has reading God's Word over these 27 days changed the way you see yourself or your circumstances?",
+    prayer: "Father, let Your Word continue to correct, instruct, and transform me daily. Amen.",
+    action: "Share this app or one of these devotionals with someone who needs it today."
+  },
+  {
+    verse: "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
+    ref: "1 Corinthians 13:13",
+    title: "Love Is the Greatest",
+    truth: "Love is eternal because God Himself is eternal and God is love. Of all spiritual virtues love is the one that outlasts and defines everything.",
+    reflection: "Who in your life most needs to experience God's love through you right now?",
+    prayer: "Lord, make me an instrument of Your love to everyone I encounter today. Amen.",
+    action: "Do one unexpected act of love for someone today with no expectation of return."
+  },
+  {
+    verse: "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+    ref: "Romans 15:13",
+    title: "Hope That Does Not Disappoint",
+    truth: "Hope in God is confident expectation based on who He is. He is called the God of hope — hope is not just something He gives, it is something He is.",
+    reflection: "In what area of your life has hope been hardest to hold onto?",
+    prayer: "God of hope, let hope rise where discouragement has tried to take root. Amen.",
+    action: "Write down one thing you are choosing to hope for and write God's name next to it as the anchor."
+  },
+  {
+    verse: "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+    ref: "2 Corinthians 5:17",
+    title: "A New Beginning Every Day",
+    truth: "In Christ you are genuinely, permanently, and completely new. Every day in Christ is lived as a new creation walking in new purpose.",
+    reflection: "What old identity or past failure have you been allowing to define you that God says has passed away?",
+    prayer: "Lord, I step into today as a new creation — purposed, loved, and free. Amen.",
+    action: "Write the old identity you are releasing and next to it write who God says you are."
+  }
+];
+
+let currentDay = 0;
+
+function loadDay(index) {
+  const d = devotionals[index];
+  document.getElementById('dayIndicator').textContent = `Day ${index + 1} of 30`;
+  document.getElementById('verseText').textContent = `"${d.verse}"`;
+  document.getElementById('verseRef').textContent = `— ${d.ref}`;
+  document.getElementById('devotionalContent').innerHTML = `
+    <p><span class="devotional-label">✦ ${d.title}</span></p>
+    <p><span class="devotional-label">Truth:</span> ${d.truth}</p>
+    <p><span class="devotional-label">Reflection:</span> ${d.reflection}</p>
+    <div class="prayer-box"><span class="devotional-label">Prayer:</span><br>${d.prayer}</div>
+    <div class="action-box"><span class="devotional-label">⚡ Today's Action:</span> ${d.action}</div>
+  `;
+  document.getElementById('prevBtn').disabled = index === 0;
+  document.getElementById('nextBtn').disabled = index === devotionals.length - 1;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function changeDay(direction) {
+  currentDay = Math.max(0, Math.min(devotionals.length - 1, currentDay + direction));
+  loadDay(currentDay);
+}
+
+function toggleDark() {
+  document.body.classList.toggle('dark');
+  const btn = document.querySelector('.dark-toggle');
+  btn.textContent = document.body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';
+}
+
+function shareVerse() {
+  const d = devotionals[currentDay];
+  const text = `"${d.verse}" — ${d.ref}\n\nRead today's devotional at your Daily KJV Bible App 🙏`;
+  if (navigator.share) {
+    navigator.share({ title: 'Daily KJV Bible', text: text });
+  } else {
+    navigator.clipboard.writeText(text);
+    alert('Verse copied to clipboard! Share it anywhere. 🙏');
+  }
+}
+
+const startDate = new Date('2024-01-01');
+const today = new Date();
+const daysDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) % 30;
+currentDay = daysDiff >= 0 ? daysDiff : 0;
+loadDay(currentDay);
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily KJV Bible – Verse, Devotional & Reading</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', serif;
+    background: #f9f6f0;
+    color: #2c2c2c;
+    transition: all 0.3s ease;
+  }
+  body.dark { background: #1a1a2e; color: #e0d7c6; }
+  header {
+    background: #2c5f2e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  header h1 { font-size: 1.6em; letter-spacing: 1px; }
+  header p { font-size: 0.85em; opacity: 0.85; margin-top: 4px; }
+  .dark-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85em;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px; }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  body.dark .card {
+    background: #16213e;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  .card-title {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2c5f2e;
+    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
+  }
+  body.dark .card-title { color: #7ec882; }
+  .verse-text {
+    font-size: 1.35em;
+    line-height: 1.7;
+    font-style: italic;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  body.dark .verse-text { color: #f0e6d3; }
+  .verse-ref {
+    font-size: 0.9em;
+    color: #2c5f2e;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+  body.dark .verse-ref { color: #7ec882; }
+  .devotional-section p {
+    font-size: 1em;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  .devotional-label {
+    font-weight: bold;
+    color: #2c5f2e;
+    font-family: Arial, sans-serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  body.dark .devotional-label { color: #7ec882; }
+  .prayer-box {
+    background: #f0f7f0;
+    border-left: 4px solid #2c5f2e;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    line-height: 1.75;
+    margin: 10px 0 14px;
+  }
+  body.dark .prayer-box { background: #0f3460; border-left-color: #7ec882; }
+  .action-box {
+    background: #fff8e7;
+    border: 1px solid #f0c040;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+  body.dark .action-box { background: #2a2a1a; border-color: #a08030; }
+  .nav-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .nav-btn {
+    background: #2c5f2e;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-family: Arial, sans-serif;
+    transition: background 0.2s;
+  }
+  .nav-btn:hover { background: #1e4220; }
+  .nav-btn:disabled { background: #aaa; cursor: not-allowed; }
+  .day-indicator {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 16px;
+  }
+  .share-btn {
+    background: none;
+    border: 2px solid #2c5f2e;
+    color: #2c5f2e;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-top: 12px;
+    font-family: Arial, sans-serif;
+    transition: all 0.2s;
+  }
+  .share-btn:hover { background: #2c5f2e; color: white; }
+  body.dark .share-btn { border-color: #7ec882; color: #7ec882; }
+  body.dark .share-btn:hover { background: #7ec882; color: #1a1a2e; }
+
+  /* MOOD CHECKER STYLES */
+  .mood-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .mood-btn {
+    background: #f0f7f0;
+    border: 2px solid #d0e8d0;
+    border-radius: 12px;
+    padding: 12px 6px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.8em;
+    transition: all 0.2s;
+    color: #2c2c2c;
+  }
+  .mood-btn:hover { background: #2c5f2e; color: white; border-color: #2c5f2e; }
+  .mood-btn.selected { background: #2c5f2e; color: white; border-color: #2c5f2e; }
+  body.dark .mood-btn { background: #0f3460; border-color: #1a4a6e; color: #e0d7c6; }
+  body.dark .mood-btn:hover { background: #7ec882; color: #1a1a2e; }
+  body.dark .mood-btn.selected { background: #7ec882; color: #1a1a2e; }
+  .mood-emoji { font-size: 1.8em; display: block; margin-bottom: 4px; }
+  .mood-result {
+    display: none;
+    margin-top: 16px;
+    padding: 20px;
+    background: #f0f7f0;
+    border-radius: 12px;
+    border-left: 4px solid #2c5f2e;
+  }
+  body.dark .mood-result { background: #0f3460; border-left-color: #7ec882; }
+  .mood-result.visible { display: block; }
+  .mood-verse {
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .mood-ref {
+    font-weight: bold;
+    color: #2c5f2e;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+    margin-bottom: 12px;
+  }
+  body.dark .mood-ref { color: #7ec882; }
+  .mood-encouragement {
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: #444;
+  }
+  body.dark .mood-encouragement { color: #c0b89a; }
+  .mood-reset {
+    background: none;
+    border: 2px solid #2c5f2e;
+    color: #2c5f2e;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-top: 14px;
+    font-family: Arial, sans-serif;
+  }
+  body.dark .mood-reset { border-color: #7ec882; color: #7ec882; }
+
+  footer {
+    text-align: center;
+    padding: 30px 16px;
+    font-size: 0.8em;
+    color: #999;
+    font-family: Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>✝ Daily KJV Bible</h1>
+  <p>Verse • Devotional • Prayer • Action</p>
+  <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+</header>
+
+<div class="container">
+
+  <!-- MOOD CHECKER -->
+  <div class="card">
+    <div class="card-title">✦ How Are You Feeling Today?</div>
+    <p style="font-size:0.95em; color:#666; margin-bottom:4px; font-family:Arial,sans-serif;">
+      Select how you feel and receive a scripture just for you 🙏
+    </p>
+    <div class="mood-grid">
+      <button class="mood-btn" onclick="showMood('sad')">
+        <span class="mood-emoji">😔</span>Sad
+      </button>
+      <button class="mood-btn" onclick="showMood('anxious')">
+        <span class="mood-emoji">😰</span>Anxious
+      </button>
+      <button class="mood-btn" onclick="showMood('angry')">
+        <span class="mood-emoji">😤</span>Angry
+      </button>
+      <button class="mood-btn" onclick="showMood('lonely')">
+        <span class="mood-emoji">🥺</span>Lonely
+      </button>
+      <button class="mood-btn" onclick="showMood('confused')">
+        <span class="mood-emoji">😕</span>Confused
+      </button>
+      <button class="mood-btn" onclick="showMood('weak')">
+        <span class="mood-emoji">😓</span>Weak
+      </button>
+      <button class="mood-btn" onclick="showMood('grateful')">
+        <span class="mood-emoji">🙏</span>Grateful
+      </button>
+      <button class="mood-btn" onclick="showMood('joyful')">
+        <span class="mood-emoji">😊</span>Joyful
+      </button>
+      <button class="mood-btn" onclick="showMood('hopeless')">
+        <span class="mood-emoji">😞</span>Hopeless
+      </button>
+      <button class="mood-btn" onclick="showMood('afraid')">
+        <span class="mood-emoji">😨</span>Afraid
+      </button>
+      <button class="mood-btn" onclick="showMood('grieving')">
+        <span class="mood-emoji">💔</span>Grieving
+      </button>
+      <button class="mood-btn" onclick="showMood('blessed')">
+        <span class="mood-emoji">✨</span>Blessed
+      </button>
+    </div>
+    <div class="mood-result" id="moodResult">
+      <div class="mood-verse" id="moodVerse"></div>
+      <div class="mood-ref" id="moodRef"></div>
+      <div class="mood-encouragement" id="moodEncouragement"></div>
+      <button class="mood-reset" onclick="resetMood()">Choose a Different Feeling</button>
+    </div>
+  </div>
+
+  <div class="day-indicator" id="dayIndicator">Day 1 of 30</div>
+
+  <!-- VERSE OF THE DAY -->
+  <div class="card">
+    <div class="card-title">✦ Verse of the Day</div>
+    <div class="verse-text" id="verseText"></div>
+    <div class="verse-ref" id="verseRef"></div>
+    <button class="share-btn" onclick="shareVerse()">Share This Verse</button>
+  </div>
+
+  <!-- DEVOTIONAL -->
+  <div class="card devotional-section">
+    <div class="card-title">✦ Today's Devotional</div>
+    <div id="devotionalContent"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn" onclick="changeDay(-1)">← Previous</button>
+    <button class="nav-btn" id="nextBtn" onclick="changeDay(1)">Next →</button>
+  </div>
+
+</div>
+
+<!-- EMAIL SUBSCRIBE -->
+<div class="container">
+  <div class="card" style="text-align:center;">
+    <div class="card-title">✦ Get the Daily Verse by Email</div>
+    <p style="margin-bottom:16px; line-height:1.7; font-size:1em;">
+      Join believers receiving daily scripture and devotionals
+      straight to their inbox — free, every morning. 🙏
+    </p>
+    <a href="https://kjvdailywordvault.substack.com/subscribe" target="_blank"
+   style="display:inline-block; background:#2c5f2e; color:white;
+          padding:14px 36px; border-radius:25px; text-decoration:none;
+          font-family:Arial,sans-serif; font-size:18px;">
+   Subscribe
+</a>
+       
+       
+             
+            
       
-       style="display:inline-block; background:#2c5f2e; color:white;
-              padding:14px 36px; border-radius:25px; text-decoration:none;
-              font-family:Arial,sans-serif; font-size:1em; margin-top:8px;">
-      ✉ Subscribe Free
-    </a>
-  </div>
-</div>
-
-<footer>
-  <p>Daily KJV Bible App &nbsp;|&nbsp; King James Version is Public Domain</p>
-  <p style="margin-top:6px;">Built with love for the Word of God 🙏</p>
-</footer>
-
-<script>
-// MOOD DATA
-const moods = {
-  sad: {
-    verse: "He healeth the broken in heart, and bindeth up their wounds.",
-    ref: "Psalm 147:3",
-    encouragement: "God sees every tear you have cried today. You do not have to hide your sadness from Him — He is drawn to broken hearts and His healing is real. Bring Him your sadness exactly as it is and let Him hold it with you."
-  },
-  anxious: {
-    verse: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
-    ref: "Philippians 4:6-7",
-    encouragement: "Anxiety tells you that you must figure everything out right now. God says bring it to Me instead. His peace is not something you manufacture — it is something He guards you with when you choose prayer over worry."
-  },
-  angry: {
-    verse: "Be ye angry, and sin not: let not the sun go down upon your wrath.",
-    ref: "Ephesians 4:26",
-    encouragement: "God does not condemn your anger — even Jesus felt righteous anger. What matters is what you do with it. Bring it honestly to God before it takes root and grows into something that hurts you or someone else."
-  },
-  lonely: {
-    verse: "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee.",
-    ref: "Isaiah 41:10",
-    encouragement: "Loneliness is one of the most painful human experiences — but you are never truly alone. The God of the universe is personally present with you right now in this very moment. He sees you, He knows you, and He is with you."
-  },
-  confused: {
-    verse: "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
-    ref: "Proverbs 3:5-6",
-    encouragement: "When nothing makes sense, God asks for one thing — trust. Not understanding, not a plan, just trust. He promises to direct your path even when you cannot see it. You do not need clarity right now as much as you need Him."
-  },
-  weak: {
-    verse: "I can do all things through Christ which strengtheneth me.",
-    ref: "Philippians 4:13",
-    encouragement: "Feeling weak is not a sign that God has abandoned you — it is an invitation to lean on His strength instead of your own. His power is made perfect in weakness. The less you have of yourself, the more room there is for Him."
-  },
-  grateful: {
-    verse: "This is the day which the LORD hath made; we will rejoice and be glad in it.",
-    ref: "Psalm 118:24",
-    encouragement: "Gratitude is one of the most powerful spiritual acts you can practice. When you choose thankfulness you are declaring that God is good and that His goodness is bigger than any difficulty. Keep this feeling close and let it fuel your faith today."
-  },
-  joyful: {
-    verse: "Rejoice in the Lord always: and again I say, Rejoice.",
-    ref: "Philippians 4:4",
-    encouragement: "Joy is a gift and today you are living in it. Let this feeling be a reminder of God's goodness and share it generously with everyone around you. Your joy today could be the light someone else desperately needs to see."
-  },
-  hopeless: {
-    verse: "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
-    ref: "Romans 15:13",
-    encouragement: "When hope feels completely gone, God calls Himself the God of hope — which means hope is not just something He gives, it is something He is. As long as you have Him you have access to hope that cannot be extinguished. He is not finished with your story."
-  },
-  afraid: {
-    verse: "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
-    ref: "2 Timothy 1:7",
-    encouragement: "Fear did not come from God. He has placed inside you power, love, and a sound mind — and those are stronger than whatever is frightening you right now. Speak this verse out loud and remind fear that it has no authority over a child of God."
-  },
-  grieving: {
-    verse: "Blessed are they that mourn: for they shall be comforted.",
-    ref: "Matthew 5:4",
-    encouragement: "Grief is the price of love and God honors it completely. Jesus Himself wept at the tomb of Lazarus — He does not rush your grief or minimize your loss. He sits with you in it and He personally promises that comfort is coming. You are not alone in this."
-  },
-  blessed: {
-    verse: "Every good gift and every perfect gift is from above, and cometh down from the Father of lights.",
-    ref: "James 1:17",
-    encouragement: "Every good thing in your life has God's fingerprints on it. Take a moment right now to trace each blessing back to His hand and let gratitude deepen your relationship with Him. A heart that recognizes its blessings attracts even more of God's goodness."
-  }
-};
-
-function showMood(mood) {
-  const data = moods[mood];
-  document.querySelectorAll('.mood-btn').forEach(btn => btn.classList.remove('selected'));
-  event.target.closest('.mood-btn').classList.add('selected');
-  document.getElementById('moodVerse').textContent = `"${data.verse}"`;
-  document.getElementById('moodRef').textContent = `— ${data.ref}`;
-  document.getElementById('moodEncouragement').textContent = data.encouragement;
-  const result = document.getElementById('moodResult');
-  result.classList.add('visible');
-  result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-function resetMood() {
-  document.querySelectorAll('.mood-btn').forEach(btn => btn.classList.remove('selected'));
-  document.getElementById('moodResult').classList.remove('visible');
-}
-
-// DEVOTIONAL DATA
-const devotionals = [
-  {
-    verse: "Fear thou not; for I am with thee: be not dismayed; for I am thy God.",
-    ref: "Isaiah 41:10",
-    title: "You Are Not Alone",
-    truth: "God does not promise a life without difficulty, but He promises His presence in every difficulty. His 'fear not' is not dismissing your struggle — it is answering it with Himself.",
-    reflection: "In what area of your life have you been trying to face things alone?",
-    prayer: "Lord, forgive me for forgetting You are with me. Help me to feel Your presence today in the moments I feel most alone. Strengthen me where I am weak. Amen.",
-    action: "Write down one worry and consciously hand it to God before you start your day."
-  },
-  {
-    verse: "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
-    ref: "Isaiah 26:3",
-    title: "Peace That Passes Understanding",
-    truth: "Peace is not the absence of problems — it is the presence of trust. When your mind is anchored in God rather than your circumstances, peace follows naturally.",
-    reflection: "What is occupying your mind more than God today?",
-    prayer: "Father, help me to fix my thoughts on You and Your faithfulness today. Let Your peace guard my heart. Amen.",
-    action: "Set a phone reminder every 3 hours today that simply says 'Trust God.'"
-  },
-  {
-    verse: "I can do all things through Christ which strengtheneth me.",
-    ref: "Philippians 4:13",
-    title: "When You Feel Weak",
-    truth: "This verse is not a promise of superhuman ability — it is a promise of supernatural sufficiency. Whatever God calls you to, He equips you for.",
-    reflection: "What task or challenge have you been avoiding because you feel unqualified?",
-    prayer: "Jesus, fill me with Your strength today. Let Your power be made perfect in my weakness. Amen.",
-    action: "Take one step today toward the thing you've been afraid to try."
-  },
-  {
-    verse: "It is of the LORD's mercies that we are not consumed, because his compassions fail not. They are new every morning.",
-    ref: "Lamentations 3:22-23",
-    title: "New Every Morning",
-    truth: "Yesterday's failures do not carry into today. Every morning God renews His mercy toward you — not because you earned it, but because it is His nature.",
-    reflection: "What from yesterday do you need to release before stepping into today?",
-    prayer: "Lord, I receive Your fresh mercy this morning and choose to walk in it rather than in yesterday's guilt. Amen.",
-    action: "Write 'New Mercy Today' somewhere you will see it all day."
-  },
-  {
-    verse: "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
-    ref: "Philippians 4:19",
-    title: "The God Who Provides",
-    truth: "God's provision is measured by His riches — not yours. He does not supply your needs according to your bank account but according to His unlimited resources.",
-    reflection: "What need are you most anxious about right now?",
-    prayer: "Father, I trust You to supply according to Your riches, not my circumstances. Amen.",
-    action: "Make a list of 5 needs God has already met in your life as a reminder of His faithfulness."
-  },
-  {
-    verse: "Thy word is a lamp unto my feet, and a light unto my path.",
-    ref: "Psalm 119:105",
-    title: "Walking in the Light",
-    truth: "God's Word does not always show you the entire road ahead — it lights the next step. Sometimes faith means trusting the lamp more than demanding a floodlight.",
-    reflection: "Are you waiting for complete clarity before obeying what God has already shown you?",
-    prayer: "Lord, give me the courage to take the next step in obedience even when I cannot see far ahead. Amen.",
-    action: "Read one chapter of Psalms today and highlight one verse that speaks to your current situation."
-  },
-  {
-    verse: "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
-    ref: "Matthew 11:28",
-    title: "Rest for the Weary",
-    truth: "Jesus invites you exactly as you are — tired, overwhelmed, and burdened. The rest He gives begins the moment you come.",
-    reflection: "What burden have you been carrying that you haven't given to Jesus?",
-    prayer: "Jesus, I bring You every weight I've been carrying. I receive Your rest right now by faith. Amen.",
-    action: "Take 10 minutes today to sit quietly with God — no phone, no noise, just rest."
-  },
-  {
-    verse: "The eyes of the LORD are upon the righteous, and his ears are open unto their cry.",
-    ref: "Psalm 34:15",
-    title: "The God Who Sees You",
-    truth: "You are never invisible to God. In your most overlooked moments, His eyes are fixed on you with full attention and complete love.",
-    reflection: "Have you ever felt like God wasn't paying attention to your situation?",
-    prayer: "Lord, thank You that Your eyes are on me — not to judge me but to guard and guide me. Amen.",
-    action: "Every time you feel unnoticed today, quietly say: 'God sees me.'"
-  },
-  {
-    verse: "He healeth the broken in heart, and bindeth up their wounds.",
-    ref: "Psalm 147:3",
-    title: "He Restores What Was Broken",
-    truth: "God is not repelled by your brokenness — He is drawn to it. The same hands that spoke the universe into existence are tender enough to bind up a wounded heart.",
-    reflection: "What broken place in your heart have you been hiding from God?",
-    prayer: "Father, I bring You the pieces of what has been broken in me. Begin Your healing work today. Amen.",
-    action: "Write down one area where you need healing as a reminder that you've given it to God."
-  },
-  {
-    verse: "Lo, children are an heritage of the LORD: and the fruit of the womb is his reward.",
-    ref: "Psalm 127:3",
-    title: "Children Are a Gift From God",
-    truth: "God calls children His heritage — treasures entrusted to parents as a direct reward from His hand. Every child carries the fingerprint of God's intentionality.",
-    reflection: "How does viewing children as God's heritage change the way you treat and speak to them?",
-    prayer: "Lord, help me to see children the way You see them — precious, purposed, and worthy of love and protection. Amen.",
-    action: "Speak one intentional word of encouragement over a child in your life today."
-  },
-  {
-    verse: "Train up a child in the way he should go: and when he is old, he will not depart from it.",
-    ref: "Proverbs 22:6",
-    title: "Train Them in the Way",
-    truth: "The investment you make in a child's spiritual foundation today produces fruit that outlasts your lifetime.",
-    reflection: "What spiritual habits or values are you intentionally passing on to the next generation?",
-    prayer: "Father, give me wisdom to train the children in my life with patience and purpose. Amen.",
-    action: "Read one Bible story or share one scripture with a child in your life today."
-  },
-  {
-    verse: "But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",
-    ref: "Matthew 19:14",
-    title: "Jesus and the Children",
-    truth: "Jesus used children as the very picture of what kingdom faith looks like. Childlike faith is not immature — it is the model.",
-    reflection: "In what ways has life made your faith more complicated than the simple trust of a child?",
-    prayer: "Jesus, restore in me the simple unashamed faith of a child. Help me protect that faith in every child I influence. Amen.",
-    action: "Approach one moment today with childlike trust — simply believe God without overanalyzing."
-  },
-  {
-    verse: "Have not I commanded thee? Be strong and courageous. Be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
-    ref: "Joshua 1:9",
-    title: "Courage for the Uncertain Road",
-    truth: "God says be courageous not because it is easy but because He is with you wherever you go.",
-    reflection: "What uncertain road are you facing that requires courage you don't feel you have?",
-    prayer: "Lord, I choose courage today not because I feel it but because Your presence makes it possible. Amen.",
-    action: "Take one courageous step today toward something you've been postponing out of fear."
-  },
-  {
-    verse: "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
-    ref: "1 Thessalonians 5:18",
-    title: "The Power of a Grateful Heart",
-    truth: "Gratitude is a choice made in the middle of all circumstances — not just for everything but in everything.",
-    reflection: "What is one thing in your current situation you haven't thanked God for yet?",
-    prayer: "Father, cultivate a grateful heart in me that sees Your goodness even in ordinary moments. Amen.",
-    action: "Write down 10 things you are genuinely thankful for before you do anything else today."
-  },
-  {
-    verse: "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.",
-    ref: "Psalm 27:14",
-    title: "When the Answer Seems Delayed",
-    truth: "God's delays are never denials. Waiting on the Lord is active trust that believes His timing is wiser than your urgency.",
-    reflection: "What have you been waiting on God for and has your waiting been filled with trust or anxiety?",
-    prayer: "Lord, help me to wait well. Your timing is perfect even when I cannot see it. Amen.",
-    action: "Identify one situation where you've been rushing God and release the timeline to Him today."
-  },
-  {
-    verse: "Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee.",
-    ref: "Jeremiah 31:3",
-    title: "You Are Loved Without Condition",
-    truth: "God's love was not triggered by your goodness and cannot be revoked by your failure. He draws you with kindness — not shame or guilt.",
-    reflection: "Is there anything you've done that makes you feel unworthy of God's love today?",
-    prayer: "Father, help me to stop performing for Your love and simply rest in it. Amen.",
-    action: "Say out loud three times: 'I am loved by God completely and without condition.'"
-  },
-  {
-    verse: "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
-    ref: "Ephesians 4:32",
-    title: "Forgiveness Sets You Free",
-    truth: "Forgiveness releases the debt so you are no longer imprisoned by it. God's forgiveness toward you is both the model and the motivation.",
-    reflection: "Who in your life are you still holding an unforgiven debt against?",
-    prayer: "Lord, give me grace to release every offence and walk in the freedom that forgiveness brings. Amen.",
-    action: "Write the name of one person you need to forgive and make a conscious decision to release them today."
-  },
-  {
-    verse: "Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine.",
-    ref: "Isaiah 43:1",
-    title: "God Knows Your Name",
-    truth: "You are not a number or a face in the crowd to God. He has called you by name — personally, specifically, and purposefully.",
-    reflection: "How does being personally known and called by God change how you see yourself today?",
-    prayer: "Lord, thank You for knowing my name and calling me Yours. That is more than enough. Amen.",
-    action: "Spend 5 minutes in silence simply receiving the truth that God knows your name and loves what He knows."
-  },
-  {
-    verse: "To every thing there is a season, and a time to every purpose under the heaven.",
-    ref: "Ecclesiastes 3:1",
-    title: "Purpose in Every Season",
-    truth: "Every season — the painful ones, the joyful ones, the confusing ones — has purpose woven into it by a God who wastes nothing.",
-    reflection: "What season of life are you in and have you asked God what purpose He has placed in it?",
-    prayer: "Father, help me to trust Your purposes even in seasons I don't understand. Amen.",
-    action: "Journal for 5 minutes about what God might be teaching you in your current season."
-  },
-  {
-    verse: "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
-    ref: "Ephesians 6:11",
-    title: "The Armor of God",
-    truth: "God has not left you unarmed. He has provided full armor and His instruction is clear: put it on, stand firm, and do not surrender ground.",
-    reflection: "In what area have you been trying to stand without the armor God provided?",
-    prayer: "Lord, I put on Your truth, righteousness, peace, faith, and Word today. Help me stand firm. Amen.",
-    action: "Read Ephesians 6:13-18 and identify which piece of armor you most need right now."
-  },
-  {
-    verse: "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.",
-    ref: "Psalm 55:22",
-    title: "When Life Feels Overwhelming",
-    truth: "God does not ask you to carry what He has offered to carry for you. Casting your burden is an act of trust.",
-    reflection: "What burden have you been carrying that you need to give to God right now?",
-    prayer: "Father, I release every burden that was never mine to carry. Sustain me today. Amen.",
-    action: "Write your heaviest burden on paper, pray over it, then tear it up as a physical act of giving it to God."
-  },
-  {
-    verse: "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
-    ref: "James 1:5",
-    title: "Walking in Wisdom",
-    truth: "God gives wisdom generously without making you feel foolish for asking. Every decision you face can be brought to Him.",
-    reflection: "What decision are you facing that you haven't asked God for wisdom about?",
-    prayer: "Lord, I come boldly asking for wisdom, believing You will give it generously. Amen.",
-    action: "Before any significant decision today pause and ask God for wisdom first."
-  },
-  {
-    verse: "Know therefore that the LORD thy God, he is God, the faithful God, which keepeth covenant and mercy with them that love him.",
-    ref: "Deuteronomy 7:9",
-    title: "He Is Faithful",
-    truth: "God's faithfulness is a fixed attribute of His character. He has never broken a promise or failed to show up for those who trust Him.",
-    reflection: "Think of three times God was faithful in your past. How does that strengthen your trust today?",
-    prayer: "Lord, help my trust in You grow stronger with every memory of Your faithfulness. Amen.",
-    action: "Share one story of God's faithfulness with someone today."
-  },
-  {
-    verse: "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
-    ref: "Psalm 27:1",
-    title: "Light in the Darkness",
-    truth: "When God is your light, darkness has no power. When He is your salvation, no enemy has final authority over you.",
-    reflection: "What darkness do you need God to be your light in today?",
-    prayer: "Lord, You are my light in every dark place. I walk in Your light rather than being paralyzed by darkness. Amen.",
-    action: "Turn on a light in a dark room as a reminder that one source of light always overcomes darkness."
-  },
-  {
-    verse: "They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
-    ref: "Isaiah 40:31",
-    title: "Renewed in His Presence",
-    truth: "Renewal comes from waiting in God's presence not from more effort. Waiting on God is catching the wind of His Spirit and being carried by what He provides.",
-    reflection: "When is the last time you truly waited in God's presence without an agenda?",
-    prayer: "Father, I wait on You right now. Renew my strength and carry me through what I cannot walk through alone. Amen.",
-    action: "Spend 15 uninterrupted minutes in prayer today — no phone, no distractions, just waiting on God."
-  },
-  {
-    verse: "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
-    ref: "Matthew 6:33",
-    title: "Seek First",
-    truth: "When God is first in your time, decisions, and pursuits, He takes personal responsibility for your provision.",
-    reflection: "Honestly, what comes before God in your daily priorities?",
-    prayer: "Lord, I choose to seek Your kingdom first and trust You with everything else. Amen.",
-    action: "Before checking your phone tomorrow morning spend the first 5 minutes seeking God."
-  },
-  {
-    verse: "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness.",
-    ref: "2 Timothy 3:16",
-    title: "The Gift of His Word",
-    truth: "Every word of the Bible is God-breathed — given for your instruction, correction, encouragement, and transformation.",
-    reflection: "How has reading God's Word over these 27 days changed the way you see yourself or your circumstances?",
-    prayer: "Father, let Your Word continue to correct, instruct, and transform me daily. Amen.",
-    action: "Share this app or one of these devotionals with someone who needs it today."
-  },
-  {
-    verse: "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
-    ref: "1 Corinthians 13:13",
-    title: "Love Is the Greatest",
-    truth: "Love is eternal because God Himself is eternal and God is love. Of all spiritual virtues love is the one that outlasts and defines everything.",
-    reflection: "Who in your life most needs to experience God's love through you right now?",
-    prayer: "Lord, make me an instrument of Your love to everyone I encounter today. Amen.",
-    action: "Do one unexpected act of love for someone today with no expectation of return."
-  },
-  {
-    verse: "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
-    ref: "Romans 15:13",
-    title: "Hope That Does Not Disappoint",
-    truth: "Hope in God is confident expectation based on who He is. He is called the God of hope — hope is not just something He gives, it is something He is.",
-    reflection: "In what area of your life has hope been hardest to hold onto?",
-    prayer: "God of hope, let hope rise where discouragement has tried to take root. Amen.",
-    action: "Write down one thing you are choosing to hope for and write God's name next to it as the anchor."
-  },
-  {
-    verse: "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
-    ref: "2 Corinthians 5:17",
-    title: "A New Beginning Every Day",
-    truth: "In Christ you are genuinely, permanently, and completely new. Every day in Christ is lived as a new creation walking in new purpose.",
-    reflection: "What old identity or past failure have you been allowing to define you that God says has passed away?",
-    prayer: "Lord, I step into today as a new creation — purposed, loved, and free. Amen.",
-    action: "Write the old identity you are releasing and next to it write who God says you are."
-  }
-];
-
-let currentDay = 0;
-
-function loadDay(index) {
-  const d = devotionals[index];
-  document.getElementById('dayIndicator').textContent = `Day ${index + 1} of 30`;
-  document.getElementById('verseText').textContent = `"${d.verse}"`;
-  document.getElementById('verseRef').textContent = `— ${d.ref}`;
-  document.getElementById('devotionalContent').innerHTML = `
-    <p><span class="devotional-label">✦ ${d.title}</span></p>
-    <p><span class="devotional-label">Truth:</span> ${d.truth}</p>
-    <p><span class="devotional-label">Reflection:</span> ${d.reflection}</p>
-    <div class="prayer-box"><span class="devotional-label">Prayer:</span><br>${d.prayer}</div>
-    <div class="action-box"><span class="devotional-label">⚡ Today's Action:</span> ${d.action}</div>
-  `;
-  document.getElementById('prevBtn').disabled = index === 0;
-  document.getElementById('nextBtn').disabled = index === devotionals.length - 1;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function changeDay(direction) {
-  currentDay = Math.max(0, Math.min(devotionals.length - 1, currentDay + direction));
-  loadDay(currentDay);
-}
-
-function toggleDark() {
-  document.body.classList.toggle('dark');
-  const btn = document.querySelector('.dark-toggle');
-  btn.textContent = document.body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';
-}
-
-function shareVerse() {
-  const d = devotionals[currentDay];
-  const text = `"${d.verse}" — ${d.ref}\n\nRead today's devotional at your Daily KJV Bible App 🙏`;
-  if (navigator.share) {
-    navigator.share({ title: 'Daily KJV Bible', text: text });
-  } else {
-    navigator.clipboard.writeText(text);
-    alert('Verse copied to clipboard! Share it anywhere. 🙏');
-  }
-}
-
-const startDate = new Date('2024-01-01');
-const today = new Date();
-const daysDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) % 30;
-currentDay = daysDiff >= 0 ? daysDiff : 0;
-loadDay(currentDay);
-</script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily KJV Bible – Verse, Devotional & Reading</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Georgia', serif;
-    background: #f9f6f0;
-    color: #2c2c2c;
-    transition: all 0.3s ease;
-  }
-  body.dark { background: #1a1a2e; color: #e0d7c6; }
-  header {
-    background: #2c5f2e;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  }
-  header h1 { font-size: 1.6em; letter-spacing: 1px; }
-  header p { font-size: 0.85em; opacity: 0.85; margin-top: 4px; }
-  .dark-toggle {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.2);
-    border: none;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.85em;
-  }
-  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px; }
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  }
-  body.dark .card {
-    background: #16213e;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-  }
-  .card-title {
-    font-size: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #2c5f2e;
-    margin-bottom: 12px;
-    font-family: Arial, sans-serif;
-  }
-  body.dark .card-title { color: #7ec882; }
-  .verse-text {
-    font-size: 1.35em;
-    line-height: 1.7;
-    font-style: italic;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-  }
-  body.dark .verse-text { color: #f0e6d3; }
-  .verse-ref {
-    font-size: 0.9em;
-    color: #2c5f2e;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-  }
-  body.dark .verse-ref { color: #7ec882; }
-  .devotional-section p {
-    font-size: 1em;
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
-  .devotional-label {
-    font-weight: bold;
-    color: #2c5f2e;
-    font-family: Arial, sans-serif;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  body.dark .devotional-label { color: #7ec882; }
-  .prayer-box {
-    background: #f0f7f0;
-    border-left: 4px solid #2c5f2e;
-    padding: 16px 20px;
-    border-radius: 0 8px 8px 0;
-    font-style: italic;
-    line-height: 1.75;
-    margin: 10px 0 14px;
-  }
-  body.dark .prayer-box { background: #0f3460; border-left-color: #7ec882; }
-  .action-box {
-    background: #fff8e7;
-    border: 1px solid #f0c040;
-    padding: 14px 18px;
-    border-radius: 8px;
-    font-size: 0.95em;
-    line-height: 1.6;
-  }
-  body.dark .action-box { background: #2a2a1a; border-color: #a08030; }
-  .nav-buttons {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 8px;
-  }
-  .nav-btn {
-    background: #2c5f2e;
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 0.95em;
-    font-family: Arial, sans-serif;
-    transition: background 0.2s;
-  }
-  .nav-btn:hover { background: #1e4220; }
-  .nav-btn:disabled { background: #aaa; cursor: not-allowed; }
-  .day-indicator {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 0.85em;
-    color: #888;
-    margin-bottom: 16px;
-  }
-  .share-btn {
-    background: none;
-    border: 2px solid #2c5f2e;
-    color: #2c5f2e;
-    padding: 8px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.85em;
-    margin-top: 12px;
-    font-family: Arial, sans-serif;
-    transition: all 0.2s;
-  }
-  .share-btn:hover { background: #2c5f2e; color: white; }
-  body.dark .share-btn { border-color: #7ec882; color: #7ec882; }
-  body.dark .share-btn:hover { background: #7ec882; color: #1a1a2e; }
-
-  /* MOOD CHECKER STYLES */
-  .mood-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 16px 0;
-  }
-  .mood-btn {
-    background: #f0f7f0;
-    border: 2px solid #d0e8d0;
-    border-radius: 12px;
-    padding: 12px 6px;
-    cursor: pointer;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 0.8em;
-    transition: all 0.2s;
-    color: #2c2c2c;
-  }
-  .mood-btn:hover { background: #2c5f2e; color: white; border-color: #2c5f2e; }
-  .mood-btn.selected { background: #2c5f2e; color: white; border-color: #2c5f2e; }
-  body.dark .mood-btn { background: #0f3460; border-color: #1a4a6e; color: #e0d7c6; }
-  body.dark .mood-btn:hover { background: #7ec882; color: #1a1a2e; }
-  body.dark .mood-btn.selected { background: #7ec882; color: #1a1a2e; }
-  .mood-emoji { font-size: 1.8em; display: block; margin-bottom: 4px; }
-  .mood-result {
-    display: none;
-    margin-top: 16px;
-    padding: 20px;
-    background: #f0f7f0;
-    border-radius: 12px;
-    border-left: 4px solid #2c5f2e;
-  }
-  body.dark .mood-result { background: #0f3460; border-left-color: #7ec882; }
-  .mood-result.visible { display: block; }
-  .mood-verse {
-    font-size: 1.1em;
-    font-style: italic;
-    line-height: 1.7;
-    margin-bottom: 8px;
-  }
-  .mood-ref {
-    font-weight: bold;
-    color: #2c5f2e;
-    font-family: Arial, sans-serif;
-    font-size: 0.9em;
-    margin-bottom: 12px;
-  }
-  body.dark .mood-ref { color: #7ec882; }
-  .mood-encouragement {
-    font-size: 0.95em;
-    line-height: 1.7;
-    color: #444;
-  }
-  body.dark .mood-encouragement { color: #c0b89a; }
-  .mood-reset {
-    background: none;
-    border: 2px solid #2c5f2e;
-    color: #2c5f2e;
-    padding: 8px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.85em;
-    margin-top: 14px;
-    font-family: Arial, sans-serif;
-  }
-  body.dark .mood-reset { border-color: #7ec882; color: #7ec882; }
-
-  footer {
-    text-align: center;
-    padding: 30px 16px;
-    font-size: 0.8em;
-    color: #999;
-    font-family: Arial, sans-serif;
-  }
-</style>
-</head>
-<body>
-<header>
-  <h1>✝ Daily KJV Bible</h1>
-  <p>Verse • Devotional • Prayer • Action</p>
-  <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
-</header>
-
-<div class="container">
-
-  <!-- MOOD CHECKER -->
-  <div class="card">
-    <div class="card-title">✦ How Are You Feeling Today?</div>
-    <p style="font-size:0.95em; color:#666; margin-bottom:4px; font-family:Arial,sans-serif;">
-      Select how you feel and receive a scripture just for you 🙏
-    </p>
-    <div class="mood-grid">
-      <button class="mood-btn" onclick="showMood('sad')">
-        <span class="mood-emoji">😔</span>Sad
-      </button>
-      <button class="mood-btn" onclick="showMood('anxious')">
-        <span class="mood-emoji">😰</span>Anxious
-      </button>
-      <button class="mood-btn" onclick="showMood('angry')">
-        <span class="mood-emoji">😤</span>Angry
-      </button>
-      <button class="mood-btn" onclick="showMood('lonely')">
-        <span class="mood-emoji">🥺</span>Lonely
-      </button>
-      <button class="mood-btn" onclick="showMood('confused')">
-        <span class="mood-emoji">😕</span>Confused
-      </button>
-      <button class="mood-btn" onclick="showMood('weak')">
-        <span class="mood-emoji">😓</span>Weak
-      </button>
-      <button class="mood-btn" onclick="showMood('grateful')">
-        <span class="mood-emoji">🙏</span>Grateful
-      </button>
-      <button class="mood-btn" onclick="showMood('joyful')">
-        <span class="mood-emoji">😊</span>Joyful
-      </button>
-      <button class="mood-btn" onclick="showMood('hopeless')">
-        <span class="mood-emoji">😞</span>Hopeless
-      </button>
-      <button class="mood-btn" onclick="showMood('afraid')">
-        <span class="mood-emoji">😨</span>Afraid
-      </button>
-      <button class="mood-btn" onclick="showMood('grieving')">
-        <span class="mood-emoji">💔</span>Grieving
-      </button>
-      <button class="mood-btn" onclick="showMood('blessed')">
-        <span class="mood-emoji">✨</span>Blessed
-      </button>
-    </div>
-    <div class="mood-result" id="moodResult">
-      <div class="mood-verse" id="moodVerse"></div>
-      <div class="mood-ref" id="moodRef"></div>
-      <div class="mood-encouragement" id="moodEncouragement"></div>
-      <button class="mood-reset" onclick="resetMood()">Choose a Different Feeling</button>
-    </div>
-  </div>
-
-  <div class="day-indicator" id="dayIndicator">Day 1 of 30</div>
-
-  <!-- VERSE OF THE DAY -->
-  <div class="card">
-    <div class="card-title">✦ Verse of the Day</div>
-    <div class="verse-text" id="verseText"></div>
-    <div class="verse-ref" id="verseRef"></div>
-    <button class="share-btn" onclick="shareVerse()">Share This Verse</button>
-  </div>
-
-  <!-- DEVOTIONAL -->
-  <div class="card devotional-section">
-    <div class="card-title">✦ Today's Devotional</div>
-    <div id="devotionalContent"></div>
-  </div>
-
-  <!-- NAVIGATION -->
-  <div class="nav-buttons">
-    <button class="nav-btn" id="prevBtn" onclick="changeDay(-1)">← Previous</button>
-    <button class="nav-btn" id="nextBtn" onclick="changeDay(1)">Next →</button>
-  </div>
-
-</div>
-
-<!-- EMAIL SUBSCRIBE -->
-<div class="container">
-  <div class="card" style="text-align:center;">
-    <div class="card-title">✦ Get the Daily Verse by Email</div>
-    <p style="margin-bottom:16px; line-height:1.7; font-size:1em;">
-      Join believers receiving daily scripture and devotionals
-      straight to their inbox — free, every morning. 🙏
-    </p>
-    <a href="PASTE_YOUR_BEEHIIV_LINK_HERE"
-       target="_blank"
-       style="display:inline-block; background:#2c5f2e; color:white;
-              padding:14px 36px; border-radius:25px; text-decoration:none;
-              font-family:Arial,sans-serif; font-size:1em; margin-top:8px;">
-      ✉ Subscribe Free
-    </a>
-  </div>
-</div>
-
-<footer>
-  <p>Daily KJV Bible App &nbsp;|&nbsp; King James Version is Public Domain</p>
-  <p style="margin-top:6px;">Built with love for the Word of God 🙏</p>
-</footer>
-
-<script>
-// MOOD DATA
-const moods = {
-  sad: {
-    verse: "He healeth the broken in heart, and bindeth up their wounds.",
-    ref: "Psalm 147:3",
-    encouragement: "God sees every tear you have cried today. You do not have to hide your sadness from Him — He is drawn to broken hearts and His healing is real. Bring Him your sadness exactly as it is and let Him hold it with you."
-  },
-  anxious: {
-    verse: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
-    ref: "Philippians 4:6-7",
-    encouragement: "Anxiety tells you that you must figure everything out right now. God says bring it to Me instead. His peace is not something you manufacture — it is something He guards you with when you choose prayer over worry."
-  },
-  angry: {
-    verse: "Be ye angry, and sin not: let not the sun go down upon your wrath.",
-    ref: "Ephesians 4:26",
-    encouragement: "God does not condemn your anger — even Jesus felt righteous anger. What matters is what you do with it. Bring it honestly to God before it takes root and grows into something that hurts you or someone else."
-  },
-  lonely: {
-    verse: "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee.",
-    ref: "Isaiah 41:10",
-    encouragement: "Loneliness is one of the most painful human experiences — but you are never truly alone. The God of the universe is personally present with you right now in this very moment. He sees you, He knows you, and He is with you."
-  },
-  confused: {
-    verse: "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
-    ref: "Proverbs 3:5-6",
-    encouragement: "When nothing makes sense, God asks for one thing — trust. Not understanding, not a plan, just trust. He promises to direct your path even when you cannot see it. You do not need clarity right now as much as you need Him."
-  },
-  weak: {
-    verse: "I can do all things through Christ which strengtheneth me.",
-    ref: "Philippians 4:13",
-    encouragement: "Feeling weak is not a sign that God has abandoned you — it is an invitation to lean on His strength instead of your own. His power is made perfect in weakness. The less you have of yourself, the more room there is for Him."
-  },
-  grateful: {
-    verse: "This is the day which the LORD hath made; we will rejoice and be glad in it.",
-    ref: "Psalm 118:24",
-    encouragement: "Gratitude is one of the most powerful spiritual acts you can practice. When you choose thankfulness you are declaring that God is good and that His goodness is bigger than any difficulty. Keep this feeling close and let it fuel your faith today."
-  },
-  joyful: {
-    verse: "Rejoice in the Lord always: and again I say, Rejoice.",
-    ref: "Philippians 4:4",
-    encouragement: "Joy is a gift and today you are living in it. Let this feeling be a reminder of God's goodness and share it generously with everyone around you. Your joy today could be the light someone else desperately needs to see."
-  },
-  hopeless: {
-    verse: "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
-    ref: "Romans 15:13",
-    encouragement: "When hope feels completely gone, God calls Himself the God of hope — which means hope is not just something He gives, it is something He is. As long as you have Him you have access to hope that cannot be extinguished. He is not finished with your story."
-  },
-  afraid: {
-    verse: "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
-    ref: "2 Timothy 1:7",
-    encouragement: "Fear did not come from God. He has placed inside you power, love, and a sound mind — and those are stronger than whatever is frightening you right now. Speak this verse out loud and remind fear that it has no authority over a child of God."
-  },
-  grieving: {
-    verse: "Blessed are they that mourn: for they shall be comforted.",
-    ref: "Matthew 5:4",
-    encouragement: "Grief is the price of love and God honors it completely. Jesus Himself wept at the tomb of Lazarus — He does not rush your grief or minimize your loss. He sits with you in it and He personally promises that comfort is coming. You are not alone in this."
-  },
-  blessed: {
-    verse: "Every good gift and every perfect gift is from above, and cometh down from the Father of lights.",
-    ref: "James 1:17",
-    encouragement: "Every good thing in your life has God's fingerprints on it. Take a moment right now to trace each blessing back to His hand and let gratitude deepen your relationship with Him. A heart that recognizes its blessings attracts even more of God's goodness."
-  }
-};
-
-function showMood(mood) {
-  const data = moods[mood];
-  document.querySelectorAll('.mood-btn').forEach(btn => btn.classList.remove('selected'));
-  event.target.closest('.mood-btn').classList.add('selected');
-  document.getElementById('moodVerse').textContent = `"${data.verse}"`;
-  document.getElementById('moodRef').textContent = `— ${data.ref}`;
-  document.getElementById('moodEncouragement').textContent = data.encouragement;
-  const result = document.getElementById('moodResult');
-  result.classList.add('visible');
-  result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-function resetMood() {
-  document.querySelectorAll('.mood-btn').forEach(btn => btn.classList.remove('selected'));
-  document.getElementById('moodResult').classList.remove('visible');
-}
-
-// DEVOTIONAL DATA
-const devotionals = [
-  {
-    verse: "Fear thou not; for I am with thee: be not dismayed; for I am thy God.",
-    ref: "Isaiah 41:10",
-    title: "You Are Not Alone",
-    truth: "God does not promise a life without difficulty, but He promises His presence in every difficulty. His 'fear not' is not dismissing your struggle — it is answering it with Himself.",
-    reflection: "In what area of your life have you been trying to face things alone?",
-    prayer: "Lord, forgive me for forgetting You are with me. Help me to feel Your presence today in the moments I feel most alone. Strengthen me where I am weak. Amen.",
-    action: "Write down one worry and consciously hand it to God before you start your day."
-  },
-  {
-    verse: "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
-    ref: "Isaiah 26:3",
-    title: "Peace That Passes Understanding",
-    truth: "Peace is not the absence of problems — it is the presence of trust. When your mind is anchored in God rather than your circumstances, peace follows naturally.",
-    reflection: "What is occupying your mind more than God today?",
-    prayer: "Father, help me to fix my thoughts on You and Your faithfulness today. Let Your peace guard my heart. Amen.",
-    action: "Set a phone reminder every 3 hours today that simply says 'Trust God.'"
-  },
-  {
-    verse: "I can do all things through Christ which strengtheneth me.",
-    ref: "Philippians 4:13",
-    title: "When You Feel Weak",
-    truth: "This verse is not a promise of superhuman ability — it is a promise of supernatural sufficiency. Whatever God calls you to, He equips you for.",
-    reflection: "What task or challenge have you been avoiding because you feel unqualified?",
-    prayer: "Jesus, fill me with Your strength today. Let Your power be made perfect in my weakness. Amen.",
-    action: "Take one step today toward the thing you've been afraid to try."
-  },
-  {
-    verse: "It is of the LORD's mercies that we are not consumed, because his compassions fail not. They are new every morning.",
-    ref: "Lamentations 3:22-23",
-    title: "New Every Morning",
-    truth: "Yesterday's failures do not carry into today. Every morning God renews His mercy toward you — not because you earned it, but because it is His nature.",
-    reflection: "What from yesterday do you need to release before stepping into today?",
-    prayer: "Lord, I receive Your fresh mercy this morning and choose to walk in it rather than in yesterday's guilt. Amen.",
-    action: "Write 'New Mercy Today' somewhere you will see it all day."
-  },
-  {
-    verse: "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
-    ref: "Philippians 4:19",
-    title: "The God Who Provides",
-    truth: "God's provision is measured by His riches — not yours. He does not supply your needs according to your bank account but according to His unlimited resources.",
-    reflection: "What need are you most anxious about right now?",
-    prayer: "Father, I trust You to supply according to Your riches, not my circumstances. Amen.",
-    action: "Make a list of 5 needs God has already met in your life as a reminder of His faithfulness."
-  },
-  {
-    verse: "Thy word is a lamp unto my feet, and a light unto my path.",
-    ref: "Psalm 119:105",
-    title: "Walking in the Light",
-    truth: "God's Word does not always show you the entire road ahead — it lights the next step. Sometimes faith means trusting the lamp more than demanding a floodlight.",
-    reflection: "Are you waiting for complete clarity before obeying what God has already shown you?",
-    prayer: "Lord, give me the courage to take the next step in obedience even when I cannot see far ahead. Amen.",
-    action: "Read one chapter of Psalms today and highlight one verse that speaks to your current situation."
-  },
-  {
-    verse: "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
-    ref: "Matthew 11:28",
-    title: "Rest for the Weary",
-    truth: "Jesus invites you exactly as you are — tired, overwhelmed, and burdened. The rest He gives begins the moment you come.",
-    reflection: "What burden have you been carrying that you haven't given to Jesus?",
-    prayer: "Jesus, I bring You every weight I've been carrying. I receive Your rest right now by faith. Amen.",
-    action: "Take 10 minutes today to sit quietly with God — no phone, no noise, just rest."
-  },
-  {
-    verse: "The eyes of the LORD are upon the righteous, and his ears are open unto their cry.",
-    ref: "Psalm 34:15",
-    title: "The God Who Sees You",
-    truth: "You are never invisible to God. In your most overlooked moments, His eyes are fixed on you with full attention and complete love.",
-    reflection: "Have you ever felt like God wasn't paying attention to your situation?",
-    prayer: "Lord, thank You that Your eyes are on me — not to judge me but to guard and guide me. Amen.",
-    action: "Every time you feel unnoticed today, quietly say: 'God sees me.'"
-  },
-  {
-    verse: "He healeth the broken in heart, and bindeth up their wounds.",
-    ref: "Psalm 147:3",
-    title: "He Restores What Was Broken",
-    truth: "God is not repelled by your brokenness — He is drawn to it. The same hands that spoke the universe into existence are tender enough to bind up a wounded heart.",
-    reflection: "What broken place in your heart have you been hiding from God?",
-    prayer: "Father, I bring You the pieces of what has been broken in me. Begin Your healing work today. Amen.",
-    action: "Write down one area where you need healing as a reminder that you've given it to God."
-  },
-  {
-    verse: "Lo, children are an heritage of the LORD: and the fruit of the womb is his reward.",
-    ref: "Psalm 127:3",
-    title: "Children Are a Gift From God",
-    truth: "God calls children His heritage — treasures entrusted to parents as a direct reward from His hand. Every child carries the fingerprint of God's intentionality.",
-    reflection: "How does viewing children as God's heritage change the way you treat and speak to them?",
-    prayer: "Lord, help me to see children the way You see them — precious, purposed, and worthy of love and protection. Amen.",
-    action: "Speak one intentional word of encouragement over a child in your life today."
-  },
-  {
-    verse: "Train up a child in the way he should go: and when he is old, he will not depart from it.",
-    ref: "Proverbs 22:6",
-    title: "Train Them in the Way",
-    truth: "The investment you make in a child's spiritual foundation today produces fruit that outlasts your lifetime.",
-    reflection: "What spiritual habits or values are you intentionally passing on to the next generation?",
-    prayer: "Father, give me wisdom to train the children in my life with patience and purpose. Amen.",
-    action: "Read one Bible story or share one scripture with a child in your life today."
-  },
-  {
-    verse: "But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",
-    ref: "Matthew 19:14",
-    title: "Jesus and the Children",
-    truth: "Jesus used children as the very picture of what kingdom faith looks like. Childlike faith is not immature — it is the model.",
-    reflection: "In what ways has life made your faith more complicated than the simple trust of a child?",
-    prayer: "Jesus, restore in me the simple unashamed faith of a child. Help me protect that faith in every child I influence. Amen.",
-    action: "Approach one moment today with childlike trust — simply believe God without overanalyzing."
-  },
-  {
-    verse: "Have not I commanded thee? Be strong and courageous. Be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
-    ref: "Joshua 1:9",
-    title: "Courage for the Uncertain Road",
-    truth: "God says be courageous not because it is easy but because He is with you wherever you go.",
-    reflection: "What uncertain road are you facing that requires courage you don't feel you have?",
-    prayer: "Lord, I choose courage today not because I feel it but because Your presence makes it possible. Amen.",
-    action: "Take one courageous step today toward something you've been postponing out of fear."
-  },
-  {
-    verse: "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
-    ref: "1 Thessalonians 5:18",
-    title: "The Power of a Grateful Heart",
-    truth: "Gratitude is a choice made in the middle of all circumstances — not just for everything but in everything.",
-    reflection: "What is one thing in your current situation you haven't thanked God for yet?",
-    prayer: "Father, cultivate a grateful heart in me that sees Your goodness even in ordinary moments. Amen.",
-    action: "Write down 10 things you are genuinely thankful for before you do anything else today."
-  },
-  {
-    verse: "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.",
-    ref: "Psalm 27:14",
-    title: "When the Answer Seems Delayed",
-    truth: "God's delays are never denials. Waiting on the Lord is active trust that believes His timing is wiser than your urgency.",
-    reflection: "What have you been waiting on God for and has your waiting been filled with trust or anxiety?",
-    prayer: "Lord, help me to wait well. Your timing is perfect even when I cannot see it. Amen.",
-    action: "Identify one situation where you've been rushing God and release the timeline to Him today."
-  },
-  {
-    verse: "Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee.",
-    ref: "Jeremiah 31:3",
-    title: "You Are Loved Without Condition",
-    truth: "God's love was not triggered by your goodness and cannot be revoked by your failure. He draws you with kindness — not shame or guilt.",
-    reflection: "Is there anything you've done that makes you feel unworthy of God's love today?",
-    prayer: "Father, help me to stop performing for Your love and simply rest in it. Amen.",
-    action: "Say out loud three times: 'I am loved by God completely and without condition.'"
-  },
-  {
-    verse: "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
-    ref: "Ephesians 4:32",
-    title: "Forgiveness Sets You Free",
-    truth: "Forgiveness releases the debt so you are no longer imprisoned by it. God's forgiveness toward you is both the model and the motivation.",
-    reflection: "Who in your life are you still holding an unforgiven debt against?",
-    prayer: "Lord, give me grace to release every offence and walk in the freedom that forgiveness brings. Amen.",
-    action: "Write the name of one person you need to forgive and make a conscious decision to release them today."
-  },
-  {
-    verse: "Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine.",
-    ref: "Isaiah 43:1",
-    title: "God Knows Your Name",
-    truth: "You are not a number or a face in the crowd to God. He has called you by name — personally, specifically, and purposefully.",
-    reflection: "How does being personally known and called by God change how you see yourself today?",
-    prayer: "Lord, thank You for knowing my name and calling me Yours. That is more than enough. Amen.",
-    action: "Spend 5 minutes in silence simply receiving the truth that God knows your name and loves what He knows."
-  },
-  {
-    verse: "To every thing there is a season, and a time to every purpose under the heaven.",
-    ref: "Ecclesiastes 3:1",
-    title: "Purpose in Every Season",
-    truth: "Every season — the painful ones, the joyful ones, the confusing ones — has purpose woven into it by a God who wastes nothing.",
-    reflection: "What season of life are you in and have you asked God what purpose He has placed in it?",
-    prayer: "Father, help me to trust Your purposes even in seasons I don't understand. Amen.",
-    action: "Journal for 5 minutes about what God might be teaching you in your current season."
-  },
-  {
-    verse: "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
-    ref: "Ephesians 6:11",
-    title: "The Armor of God",
-    truth: "God has not left you unarmed. He has provided full armor and His instruction is clear: put it on, stand firm, and do not surrender ground.",
-    reflection: "In what area have you been trying to stand without the armor God provided?",
-    prayer: "Lord, I put on Your truth, righteousness, peace, faith, and Word today. Help me stand firm. Amen.",
-    action: "Read Ephesians 6:13-18 and identify which piece of armor you most need right now."
-  },
-  {
-    verse: "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.",
-    ref: "Psalm 55:22",
-    title: "When Life Feels Overwhelming",
-    truth: "God does not ask you to carry what He has offered to carry for you. Casting your burden is an act of trust.",
-    reflection: "What burden have you been carrying that you need to give to God right now?",
-    prayer: "Father, I release every burden that was never mine to carry. Sustain me today. Amen.",
-    action: "Write your heaviest burden on paper, pray over it, then tear it up as a physical act of giving it to God."
-  },
-  {
-    verse: "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
-    ref: "James 1:5",
-    title: "Walking in Wisdom",
-    truth: "God gives wisdom generously without making you feel foolish for asking. Every decision you face can be brought to Him.",
-    reflection: "What decision are you facing that you haven't asked God for wisdom about?",
-    prayer: "Lord, I come boldly asking for wisdom, believing You will give it generously. Amen.",
-    action: "Before any significant decision today pause and ask God for wisdom first."
-  },
-  {
-    verse: "Know therefore that the LORD thy God, he is God, the faithful God, which keepeth covenant and mercy with them that love him.",
-    ref: "Deuteronomy 7:9",
-    title: "He Is Faithful",
-    truth: "God's faithfulness is a fixed attribute of His character. He has never broken a promise or failed to show up for those who trust Him.",
-    reflection: "Think of three times God was faithful in your past. How does that strengthen your trust today?",
-    prayer: "Lord, help my trust in You grow stronger with every memory of Your faithfulness. Amen.",
-    action: "Share one story of God's faithfulness with someone today."
-  },
-  {
-    verse: "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
-    ref: "Psalm 27:1",
-    title: "Light in the Darkness",
-    truth: "When God is your light, darkness has no power. When He is your salvation, no enemy has final authority over you.",
-    reflection: "What darkness do you need God to be your light in today?",
-    prayer: "Lord, You are my light in every dark place. I walk in Your light rather than being paralyzed by darkness. Amen.",
-    action: "Turn on a light in a dark room as a reminder that one source of light always overcomes darkness."
-  },
-  {
-    verse: "They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
-    ref: "Isaiah 40:31",
-    title: "Renewed in His Presence",
-    truth: "Renewal comes from waiting in God's presence not from more effort. Waiting on God is catching the wind of His Spirit and being carried by what He provides.",
-    reflection: "When is the last time you truly waited in God's presence without an agenda?",
-    prayer: "Father, I wait on You right now. Renew my strength and carry me through what I cannot walk through alone. Amen.",
-    action: "Spend 15 uninterrupted minutes in prayer today — no phone, no distractions, just waiting on God."
-  },
-  {
-    verse: "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
-    ref: "Matthew 6:33",
-    title: "Seek First",
-    truth: "When God is first in your time, decisions, and pursuits, He takes personal responsibility for your provision.",
-    reflection: "Honestly, what comes before God in your daily priorities?",
-    prayer: "Lord, I choose to seek Your kingdom first and trust You with everything else. Amen.",
-    action: "Before checking your phone tomorrow morning spend the first 5 minutes seeking God."
-  },
-  {
-    verse: "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness.",
-    ref: "2 Timothy 3:16",
-    title: "The Gift of His Word",
-    truth: "Every word of the Bible is God-breathed — given for your instruction, correction, encouragement, and transformation.",
-    reflection: "How has reading God's Word over these 27 days changed the way you see yourself or your circumstances?",
-    prayer: "Father, let Your Word continue to correct, instruct, and transform me daily. Amen.",
-    action: "Share this app or one of these devotionals with someone who needs it today."
-  },
-  {
-    verse: "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
-    ref: "1 Corinthians 13:13",
-    title: "Love Is the Greatest",
-    truth: "Love is eternal because God Himself is eternal and God is love. Of all spiritual virtues love is the one that outlasts and defines everything.",
-    reflection: "Who in your life most needs to experience God's love through you right now?",
-    prayer: "Lord, make me an instrument of Your love to everyone I encounter today. Amen.",
-    action: "Do one unexpected act of love for someone today with no expectation of return."
-  },
-  {
-    verse: "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
-    ref: "Romans 15:13",
-    title: "Hope That Does Not Disappoint",
-    truth: "Hope in God is confident expectation based on who He is. He is called the God of hope — hope is not just something He gives, it is something He is.",
-    reflection: "In what area of your life has hope been hardest to hold onto?",
-    prayer: "God of hope, let hope rise where discouragement has tried to take root. Amen.",
-    action: "Write down one thing you are choosing to hope for and write God's name next to it as the anchor."
-  },
-  {
-    verse: "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
-    ref: "2 Corinthians 5:17",
-    title: "A New Beginning Every Day",
-    truth: "In Christ you are genuinely, permanently, and completely new. Every day in Christ is lived as a new creation walking in new purpose.",
-    reflection: "What old identity or past failure have you been allowing to define you that God says has passed away?",
-    prayer: "Lord, I step into today as a new creation — purposed, loved, and free. Amen.",
-    action: "Write the old identity you are releasing and next to it write who God says you are."
-  }
-];
-
-let currentDay = 0;
-
-function loadDay(index) {
-  const d = devotionals[index];
-  document.getElementById('dayIndicator').textContent = `Day ${index + 1} of 30`;
-  document.getElementById('verseText').textContent = `"${d.verse}"`;
-  document.getElementById('verseRef').textContent = `— ${d.ref}`;
-  document.getElementById('devotionalContent').innerHTML = `
-    <p><span class="devotional-label">✦ ${d.title}</span></p>
-    <p><span class="devotional-label">Truth:</span> ${d.truth}</p>
-    <p><span class="devotional-label">Reflection:</span> ${d.reflection}</p>
-    <div class="prayer-box"><span class="devotional-label">Prayer:</span><br>${d.prayer}</div>
-    <div class="action-box"><span class="devotional-label">⚡ Today's Action:</span> ${d.action}</div>
-  `;
-  document.getElementById('prevBtn').disabled = index === 0;
-  document.getElementById('nextBtn').disabled = index === devotionals.length - 1;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function changeDay(direction) {
-  currentDay = Math.max(0, Math.min(devotionals.length - 1, currentDay + direction));
-  loadDay(currentDay);
-}
-
-function toggleDark() {
-  document.body.classList.toggle('dark');
-  const btn = document.querySelector('.dark-toggle');
-  btn.textContent = document.body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';
-}
-
-function shareVerse() {
-  const d = devotionals[currentDay];
-  const text = `"${d.verse}" — ${d.ref}\n\nRead today's devotional at your Daily KJV Bible App 🙏`;
-  if (navigator.share) {
-    navigator.share({ title: 'Daily KJV Bible', text: text });
-  } else {
-    navigator.clipboard.writeText(text);
-    alert('Verse copied to clipboard! Share it anywhere. 🙏');
-  }
-}
-
-const startDate = new Date('2024-01-01');
-const today = new Date();
-const daysDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) % 30;
-currentDay = daysDiff >= 0 ? daysDiff : 0;
-loadDay(currentDay);
-</script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily KJV Bible – Verse, Devotional & Reading</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Georgia', serif;
-    background: #f9f6f0;
-    color: #2c2c2c;
-    transition: all 0.3s ease;
-  }
-  body.dark { background: #1a1a2e; color: #e0d7c6; }
-  header {
-    background: #2c5f2e;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  }
-  header h1 { font-size: 1.6em; letter-spacing: 1px; }
-  header p { font-size: 0.85em; opacity: 0.85; margin-top: 4px; }
-  .dark-toggle {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.2);
-    border: none;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.85em;
-  }
-  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px; }
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  }
-  body.dark .card {
-    background: #16213e;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-  }
-  .card-title {
-    font-size: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #2c5f2e;
-    margin-bottom: 12px;
-    font-family: Arial, sans-serif;
-  }
-  body.dark .card-title { color: #7ec882; }
-  .verse-text {
-    font-size: 1.35em;
-    line-height: 1.7;
-    font-style: italic;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-  }
-  body.dark .verse-text { color: #f0e6d3; }
-  .verse-ref {
-    font-size: 0.9em;
-    color: #2c5f2e;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-  }
-  body.dark .verse-ref { color: #7ec882; }
-  .devotional-section p {
-    font-size: 1em;
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
-  .devotional-label {
-    font-weight: bold;
-    color: #2c5f2e;
-    font-family: Arial, sans-serif;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  body.dark .devotional-label { color: #7ec882; }
-  .prayer-box {
-    background: #f0f7f0;
-    border-left: 4px solid #2c5f2e;
-    padding: 16px 20px;
-    border-radius: 0 8px 8px 0;
-    font-style: italic;
-    line-height: 1.75;
-    margin: 10px 0 14px;
-  }
-  body.dark .prayer-box { background: #0f3460; border-left-color: #7ec882; }
-  .action-box {
-    background: #fff8e7;
-    border: 1px solid #f0c040;
-    padding: 14px 18px;
-    border-radius: 8px;
-    font-size: 0.95em;
-    line-height: 1.6;
-  }
-  body.dark .action-box { background: #2a2a1a; border-color: #a08030; }
-  .nav-buttons {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 8px;
-  }
-  .nav-btn {
-    background: #2c5f2e;
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 0.95em;
-    font-family: Arial, sans-serif;
-    transition: background 0.2s;
-  }
-  .nav-btn:hover { background: #1e4220; }
-  .nav-btn:disabled { background: #aaa; cursor: not-allowed; }
-  .day-indicator {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 0.85em;
-    color: #888;
-    margin-bottom: 16px;
-  }
-  .share-btn {
-    background: none;
-    border: 2px solid #2c5f2e;
-    color: #2c5f2e;
-    padding: 8px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.85em;
-    margin-top: 12px;
-    font-family: Arial, sans-serif;
-    transition: all 0.2s;
-  }
-  .share-btn:hover { background: #2c5f2e; color: white; }
-  body.dark .share-btn { border-color: #7ec882; color: #7ec882; }
-  body.dark .share-btn:hover { background: #7ec882; color: #1a1a2e; }
-
-  /* MOOD CHECKER STYLES */
-  .mood-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 16px 0;
-  }
-  .mood-btn {
-    background: #f0f7f0;
-    border: 2px solid #d0e8d0;
-    border-radius: 12px;
-    padding: 12px 6px;
-    cursor: pointer;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 0.8em;
-    transition: all 0.2s;
-    color: #2c2c2c;
-  }
-  .mood-btn:hover { background: #2c5f2e; color: white; border-color: #2c5f2e; }
-  .mood-btn.selected { background: #2c5f2e; color: white; border-color: #2c5f2e; }
-  body.dark .mood-btn { background: #0f3460; border-color: #1a4a6e; color: #e0d7c6; }
-  body.dark .mood-btn:hover { background: #7ec882; color: #1a1a2e; }
-  body.dark .mood-btn.selected { background: #7ec882; color: #1a1a2e; }
-  .mood-emoji { font-size: 1.8em; display: block; margin-bottom: 4px; }
-  .mood-result {
-    display: none;
-    margin-top: 16px;
-    padding: 20px;
-    background: #f0f7f0;
-    border-radius: 12px;
-    border-left: 4px solid #2c5f2e;
-  }
-  body.dark .mood-result { background: #0f3460; border-left-color: #7ec882; }
-  .mood-result.visible { display: block; }
-  .mood-verse {
-    font-size: 1.1em;
-    font-style: italic;
-    line-height: 1.7;
-    margin-bottom: 8px;
-  }
-  .mood-ref {
-    font-weight: bold;
-    color: #2c5f2e;
-    font-family: Arial, sans-serif;
-    font-size: 0.9em;
-    margin-bottom: 12px;
-  }
-  body.dark .mood-ref { color: #7ec882; }
-  .mood-encouragement {
-    font-size: 0.95em;
-    line-height: 1.7;
-    color: #444;
-  }
-  body.dark .mood-encouragement { color: #c0b89a; }
-  .mood-reset {
-    background: none;
-    border: 2px solid #2c5f2e;
-    color: #2c5f2e;
-    padding: 8px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.85em;
-    margin-top: 14px;
-    font-family: Arial, sans-serif;
-  }
-  body.dark .mood-reset { border-color: #7ec882; color: #7ec882; }
-
-  footer {
-    text-align: center;
-    padding: 30px 16px;
-    font-size: 0.8em;
-    color: #999;
-    font-family: Arial, sans-serif;
-  }
-</style>
-</head>
-<body>
-<header>
-  <h1>✝ Daily KJV Bible</h1>
-  <p>Verse • Devotional • Prayer • Action</p>
-  <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
-</header>
-
-<div class="container">
-
-  <!-- MOOD CHECKER -->
-  <div class="card">
-    <div class="card-title">✦ How Are You Feeling Today?</div>
-    <p style="font-size:0.95em; color:#666; margin-bottom:4px; font-family:Arial,sans-serif;">
-      Select how you feel and receive a scripture just for you 🙏
-    </p>
-    <div class="mood-grid">
-      <button class="mood-btn" onclick="showMood('sad')">
-        <span class="mood-emoji">😔</span>Sad
-      </button>
-      <button class="mood-btn" onclick="showMood('anxious')">
-        <span class="mood-emoji">😰</span>Anxious
-      </button>
-      <button class="mood-btn" onclick="showMood('angry')">
-        <span class="mood-emoji">😤</span>Angry
-      </button>
-      <button class="mood-btn" onclick="showMood('lonely')">
-        <span class="mood-emoji">🥺</span>Lonely
-      </button>
-      <button class="mood-btn" onclick="showMood('confused')">
-        <span class="mood-emoji">😕</span>Confused
-      </button>
-      <button class="mood-btn" onclick="showMood('weak')">
-        <span class="mood-emoji">😓</span>Weak
-      </button>
-      <button class="mood-btn" onclick="showMood('grateful')">
-        <span class="mood-emoji">🙏</span>Grateful
-      </button>
-      <button class="mood-btn" onclick="showMood('joyful')">
-        <span class="mood-emoji">😊</span>Joyful
-      </button>
-      <button class="mood-btn" onclick="showMood('hopeless')">
-        <span class="mood-emoji">😞</span>Hopeless
-      </button>
-      <button class="mood-btn" onclick="showMood('afraid')">
-        <span class="mood-emoji">😨</span>Afraid
-      </button>
-      <button class="mood-btn" onclick="showMood('grieving')">
-        <span class="mood-emoji">💔</span>Grieving
-      </button>
-      <button class="mood-btn" onclick="showMood('blessed')">
-        <span class="mood-emoji">✨</span>Blessed
-      </button>
-    </div>
-    <div class="mood-result" id="moodResult">
-      <div class="mood-verse" id="moodVerse"></div>
-      <div class="mood-ref" id="moodRef"></div>
-      <div class="mood-encouragement" id="moodEncouragement"></div>
-      <button class="mood-reset" onclick="resetMood()">Choose a Different Feeling</button>
-    </div>
-  </div>
-
-  <div class="day-indicator" id="dayIndicator">Day 1 of 30</div>
-
-  <!-- VERSE OF THE DAY -->
-  <div class="card">
-    <div class="card-title">✦ Verse of the Day</div>
-    <div class="verse-text" id="verseText"></div>
-    <div class="verse-ref" id="verseRef"></div>
-    <button class="share-btn" onclick="shareVerse()">Share This Verse</button>
-  </div>
-
-  <!-- DEVOTIONAL -->
-  <div class="card devotional-section">
-    <div class="card-title">✦ Today's Devotional</div>
-    <div id="devotionalContent"></div>
-  </div>
-
-  <!-- NAVIGATION -->
-  <div class="nav-buttons">
-    <button class="nav-btn" id="prevBtn" onclick="changeDay(-1)">← Previous</button>
-    <button class="nav-btn" id="nextBtn" onclick="changeDay(1)">Next →</button>
-  </div>
-
-</div>
-
-<!-- EMAIL SUBSCRIBE -->
-<div class="container">
-  <div class="card" style="text-align:center;">
-    <div class="card-title">✦ Get the Daily Verse by Email</div>
-    <p style="margin-bottom:16px; line-height:1.7; font-size:1em;">
-      Join believers receiving daily scripture and devotionals
-      straight to their inbox — free, every morning. 🙏
-    </p>
-    <a href="PASTE_YOUR_BEEHIIV_LINK_HERE"
-       target="_blank"
-       style="display:inline-block; background:#2c5f2e; color:white;
-              padding:14px 36px; border-radius:25px; text-decoration:none;
-              font-family:Arial,sans-serif; font-size:1em; margin-top:8px;">
-      ✉ Subscribe Free
     </a>
   </div>
 </div>
