@@ -2233,5 +2233,10 @@ const daysDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) % 30;
 currentDay = daysDiff >= 0 ? daysDiff : 0;
 loadDay(currentDay);
 </script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
 </body>
 </html>
