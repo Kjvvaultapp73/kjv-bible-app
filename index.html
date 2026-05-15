@@ -320,7 +320,42 @@
   </div>
 
 </div>
+<!-- PEACE MODE -->
+<div class="container">
+  <div class="card" style="text-align:center;">
 
+    <div class="card-title">🎧 Peace Mode</div>
+
+    <p style="margin-bottom:16px; line-height:1.7; font-size:1em;">
+      Listen peacefully while reflecting on today’s scripture.
+    </p>
+
+    <select id="trackSelector"
+      style="padding:12px; border-radius:12px; font-size:1em; margin-bottom:14px; width:80%; max-width:320px;">
+
+      <option value="audio/peace1.mp3">🌿 Ambient Peace</option>
+
+      <option value="audio/peace2.mp3">🌊 Nature + Synth</option>
+
+      <option value="audio/psalm91.mp3">✨ Psalm 91 Song</option>
+
+    </select>
+
+    <br>
+
+    <button onclick="togglePeaceMusic()" id="peaceMusicBtn"
+      style="background:#2c5f2e; color:white; border:none;
+             padding:14px 36px; border-radius:30px;
+             font-size:1em; cursor:pointer; margin-top:10px;">
+
+      ▶ Play Peace Mode
+
+    </button>
+
+    <audio id="peaceMusic" loop></audio>
+
+  </div>
+</div>
 <!-- EMAIL SUBSCRIBE -->
 <div class="container">
   <div class="card" style="text-align:center;">
