@@ -330,14 +330,30 @@
       Listen peacefully while reflecting on today’s scripture.
     </p>
 
-    <select id="trackSelector"
-      style="padding:12px; border-radius:12px; font-size:1em; margin-bottom:14px; width:80%; max-width:320px;">
+    <select id="trackSelector">
 
-      <option value="audio/peace1.mp3">🌿 Ambient Peace</option>
+  <option value="audio/happypeace.mp3">
+    🌿 Happy Peace
+  </option>
 
-      <option value="audio/peace2.mp3">🌊 Nature + Synth</option>
+  <option value="audio/peaceandmajesty.mp3">
+    👑 Peace & Majesty
+  </option>
 
-      <option value="audio/psalm91.mp3">✨ Psalm 91 Song</option>
+  <option value="audio/psalm91.mp3">
+    ✨ Psalm 91 Song
+  </option>
+
+</select>
+
+
+      
+
+      
+
+      
+
+      
 
     </select>
 
