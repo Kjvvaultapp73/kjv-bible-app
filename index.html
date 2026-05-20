@@ -361,6 +361,344 @@
 
   </div>
 </div>
+ # KJV Understanding / Glossary Mode Setup
+
+This feature will help users understand difficult KJV Bible words without replacing the original scripture text.
+
+The goal is:
+
+* keep the KJV wording intact
+* reduce confusion
+* help dyslexic readers, younger readers, and new believers
+* create a peaceful learning experience
+
+---
+
+# STEP 1 — Add a KJV Glossary Section
+
+Open:
+`index.html`
+
+Find:
+`<!-- EMAIL SUBSCRIBE -->`
+
+Paste this NEW section ABOVE the email subscribe area.
+
+```html
+<!-- KJV UNDERSTANDING MODE -->
+<div class="container">
+  <div class="card">
+
+    <div class="card-title">📖 KJV Understanding Mode</div>
+
+    <p style="line-height:1.7; margin-bottom:20px;">
+      Learn the meaning of classic King James Bible words in today's language.
+    </p>
+
+    <div class="glossary-word">
+      <strong>Fret</strong>
+      <p>To worry constantly or become upset.</p>
+    </div>
+
+    <div class="glossary-word">
+      <strong>Beseech</strong>
+      <p>To urgently ask or plead.</p>
+    </div>
+
+    <div class="glossary-word">
+      <strong>Abide</strong>
+      <p>To remain, stay, or continue.</p>
+    </div>
+
+    <div class="glossary-word">
+      <strong>Supplication</strong>
+      <p>A humble prayer or earnest request.</p>
+    </div>
+
+  </div>
+</div>
+```
+
+---
+
+# STEP 2 — Add Styling
+
+Inside your existing `<style>` section, add:
+
+```css
+.glossary-word {
+  background: #f7fbf5;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  border-left: 5px solid #2c5f2e;
+}
+
+.glossary-word strong {
+  font-size: 1.05em;
+  color: #2c5f2e;
+}
+
+.glossary-word p {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+```
+
+This creates a cleaner and calmer educational look.
+
+---
+
+# STEP 3 — Commit Changes
+
+After pasting the glossary section and CSS:
+
+1. Commit changes
+2. Hard refresh the site:
+
+`Ctrl + Shift + R`
+
+---
+
+# WHAT YOU SHOULD SEE
+
+A new section called:
+
+📖 KJV Understanding Mode
+
+With simple explanations for:
+
+* Fret
+* Beseech
+* Abide
+* Supplication
+
+---
+
+# IMPORTANT
+
+Keep the explanations:
+
+* short
+* simple
+* modern
+* calming
+
+Avoid giant dictionary-style paragraphs.
+
+The goal is:
+"Now I understand what this means."
+
+---
+
+# PUBLIC DOMAIN RESOURCES YOU CAN USE LATER
+
+Excellent public domain sources include:
+
+* Webster's 1828 Dictionary
+* Matthew Henry Commentary
+* Treasury of David
+* Public domain Bible dictionaries
+
+These can later help expand:
+
+* definitions
+* pronunciation help
+* deeper study
+* devotional insights
+
+---
+
+# FUTURE UPGRADES
+
+Later, this feature could become:
+
+* Tap-to-define words
+* Word of the Day
+* Audio pronunciation
+* Dyslexia-friendly mode
+* Memory quizzes
+* KJV word search
+* Emotional Psalms glossary
+
+---
+
+# 25 STARTER KJV WORDS
+
+You can absolutely begin with 25 words right away.
+
+Paste these additional glossary entries underneath the existing glossary words section.
+
+```html
+<div class="glossary-word">
+  <strong>Thou</strong>
+  <p>You.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Thee</strong>
+  <p>You.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Thy</strong>
+  <p>Your.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Verily</strong>
+  <p>Truly or certainly.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Meek</strong>
+  <p>Gentle, humble, and patient.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Iniquity</strong>
+  <p>Sin or moral wrongdoing.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Redeem</strong>
+  <p>To rescue, save, or buy back.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Tribulation</strong>
+  <p>Great trouble or suffering.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Perish</strong>
+  <p>To die or be destroyed.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Gentiles</strong>
+  <p>People who are not Jewish.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Adversary</strong>
+  <p>An enemy or opponent.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Countenance</strong>
+  <p>A person's face or expression.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Wrath</strong>
+  <p>Great anger or judgment.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Mercy</strong>
+  <p>Compassion and forgiveness.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Sanctify</strong>
+  <p>To make holy or set apart.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Exhort</strong>
+  <p>To strongly encourage.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Steadfast</strong>
+  <p>Faithful and unwavering.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Slothful</strong>
+  <p>Lazy or unwilling to work.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Raiment</strong>
+  <p>Clothing or garments.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Behold</strong>
+  <p>Look carefully or see.</p>
+</div>
+
+<div class="glossary-word">
+  <strong>Hearken</strong>
+  <p>To listen carefully.</p>
+</div>
+```
+
+---
+
+# ADDING A SHORT KJV HISTORY SECTION
+
+This is an excellent idea because it helps younger readers understand WHY the KJV matters historically.
+
+Paste this section BELOW the glossary section.
+
+```html
+<!-- KJV HISTORY -->
+<div class="container">
+  <div class="card">
+
+    <div class="card-title">📜 About the King James Bible</div>
+
+    <p style="line-height:1.8;">
+      The King James Version (KJV) Bible was first published in 1611 under the authorization of King James I of England.
+      It became one of the most influential and widely read Bible translations in history.
+    </p>
+
+    <p style="line-height:1.8;">
+      Known for its poetic beauty, reverent language, and historical impact,
+      the KJV has shaped Christian worship, literature, education, and culture for centuries.
+    </p>
+
+    <p style="line-height:1.8;">
+      This app was created to help modern readers better understand classic KJV words while still preserving the beauty and meaning of the original text.
+    </p>
+
+  </div>
+</div>
+```
+
+---
+
+# WHY THIS FEATURE IS POWERFUL
+
+This feature can eventually become:
+
+* a searchable KJV dictionary
+* a learning resource for younger generations
+* a dyslexia-friendly scripture helper
+* a Bible companion for new believers
+* a daily educational devotional tool
+
+That makes your app far more unique than a standard Bible app.
+
+---
+
+# STRONG RECOMMENDATION
+
+Do NOT try to add hundreds of words immediately.
+
+Start with:
+
+* 10 words
+* then 25
+* then 50
+
+Build slowly and intentionally.
+
+That will keep the app peaceful and uncluttered.
+
 <!-- EMAIL SUBSCRIBE -->
 <div class="container">
   <div class="card" style="text-align:center;">
@@ -1798,6 +2136,23 @@ loadDay(currentDay);
     color: #999;
     font-family: Arial, sans-serif;
   }
+ .glossary-word {
+  background: #f7fbf5;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  border-left: 5px solid #2c5f2e;
+}
+
+.glossary-word strong {
+  font-size: 1.05em;
+  color: #2c5f2e;
+}
+
+.glossary-word p {
+  margin-top: 8px;
+  line-height: 1.6;
+}
 </style>
 </head>
 <body>
